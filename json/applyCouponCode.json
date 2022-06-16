@@ -1,0 +1,90 @@
+{
+    "plot": {
+        "sketch": "",
+        "width": 40,
+        "type": "RESD",
+        "builtUpArea": 6000,
+        "direction": "N",
+        "budget": "",
+        "notes": "",
+        "length": 50,
+        "numberOfRooms": "",
+        "floors": 3,
+        "siteImage": []
+    },
+    "relatedDesigns": [],
+    "modifiedTime": 1616584775,
+    "pricing": {
+        "gstAmount": 702,
+        "grossAmount": 13700,
+        "netAmount": 14402
+    },
+    "direction": "",
+    "createdBy": 141,
+    "customer": {
+        "id": 7138,
+        "name": "maruti raj choudhary"
+    },
+    "products": [
+        {
+            "description": "test description",
+            "additionalOption": false,
+            "instantDelivery": true,
+            "name": "floor plan",
+            "pricing": {
+                "totalAmount": 5102,
+                "taxes": [
+                    {
+                        "value": "9%",
+                        "name": "CGST",
+                        "amount": 351
+                    },
+                    {
+                        "value": "9%",
+                        "name": "SGST",
+                        "amount": 351
+                    }
+                ],
+                "instantDelivery": 500,
+                "price": 3900,
+                "additionalOption": 0
+            },
+            "id": 2
+        },
+        {
+            "additionalOption": true,
+            "description": null,
+            "id": 11,
+            "pricing": {
+                "additionalOption": 500,
+                "taxes": [],
+                "instantDelivery": 500,
+                "price": 3900,
+                "totalAmount": 4900
+            },
+            "instantDelivery": true,
+            "name": "Working Drawings"
+        },
+        {
+            "description": null,
+            "pricing": {
+                "instantDelivery": 0,
+                "totalAmount": 4400,
+                "price": 4400,
+                "taxes": [],
+                "additionalOption": 0
+            },
+            "id": 12,
+            "instantDelivery": false,
+            "name": "Structure Drawing",
+            "additionalOption": false
+        }
+    ],
+    "currency": "INR",
+    "couponCode": "HOLIHAI",
+    "id": 48,
+    "ordeCode": "V2O202201040002",
+    "creationTime": 1616584376,
+    "referralCode": "",
+    "type": ""
+}

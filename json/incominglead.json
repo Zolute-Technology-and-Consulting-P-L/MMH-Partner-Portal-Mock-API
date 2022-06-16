@@ -1,0 +1,55 @@
+{
+    "totalRecords": 1,
+    "limit": 10,
+    "page": 1,
+    "leads":[
+     {
+        "userID": 51425,
+        "firstname": null,
+        "lastname": null,
+        "email": null,
+        "isdCode": "91",
+        "contact": "8085970012",
+        "comment": "this is for test",
+        "createdat": "1650551433",
+        "manager": {
+            "adminid": 104,
+            "firstname": "Amit ",
+            "lastname": "Yadav",
+            "email": "ayadav@makemyhouse.com"
+        }
+    },
+    {
+        "userID": 51425,
+        "firstname": null,
+        "lastname": null,
+        "email": null,
+        "isdCode": "91",
+        "contact": "8085970012",
+        "comment": "this is for test",
+        "createdat": "1650551433",
+        "manager": {
+            "adminid": 104,
+            "firstname": "Amit ",
+            "lastname": "Yadav",
+            "email": "ayadav@makemyhouse.com"
+        }
+    },
+    {
+        "userID": 51425,
+        "firstname": null,
+        "lastname": null,
+        "email": null,
+        "isdCode": "91",
+        "contact": "8085970012",
+        "comment": "this is for test",
+        "createdat": "1650551433",
+        "manager": {
+            "adminid": 104,
+            "firstname": "Amit ",
+            "lastname": "Yadav",
+            "email": "ayadav@makemyhouse.com"
+        }
+    }
+]
+}

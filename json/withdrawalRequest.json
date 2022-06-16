@@ -1,0 +1,15 @@
+{
+    "totalRecords": 1,
+    "limit": 10,
+    "page": 1,
+    "withdrawalRequest": [
+        {
+            "withdrawalid": "1",
+            "requestdate": "2022-05-20 10:43:11",
+            "amount": 4500,
+            "status": "pending",
+            "date": "0000-00-00",
+            "comment": ""
+        }
+    ]
+}

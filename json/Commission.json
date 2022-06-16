@@ -1,0 +1,27 @@
+{
+    "totalRecords": 1,
+    "limit": 10,
+    "page": 1,
+    "commissions": [
+        {
+            "commission_id": 1,
+            "commission_amount": 100,
+            "commissionPercentage": 10,
+            "commissionType": "Direct",
+            "order_code": "V2O202204270002",
+            "date": "2022-04-29 20:14:45",
+            "matureDate": "2022-05-29 20:14:48",
+            "customePaidAmount": 1000,
+            "currency": "INR",
+            "walletTransactionId": 0,
+            "commissionStatus": "Pending",
+            "customer": {
+                "userID": 51427,
+                "firstname": null,
+                "lastname": null,
+                "isdCode": "91",
+                "contact": "8085970016"
+            }
+        }
+    ]
+}

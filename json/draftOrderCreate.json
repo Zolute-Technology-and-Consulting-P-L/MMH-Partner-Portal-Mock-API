@@ -1,0 +1,39 @@
+{
+    "id": 755,
+    "orderCode": "V2O202201040002",
+    "projectID": 142,
+    "creationTime": 1641294699,
+    "modifiedTime": 1641294699,
+    "createdBy": 122,
+    "currency": "INR",
+    "plot": {
+        "length": "80",
+        "width": "60",
+        "floors": "1",
+        "direction": "N",
+        "type": "RESD",
+        "builtUpArea": "4800",
+        "numberOfRooms": "",
+        "budget": "",
+        "sketch": [],
+        "siteImage": [],
+        "notes": ""
+    },
+    "relatedDesigns": [],
+    "products": [],
+    "couponCode": "",
+    "referralCode": "",
+    "pricing": {
+        "grossAmount": 0,
+        "discountAmount": 0,
+        "taxes": [],
+        "netAmount": 0
+    },
+    "customer": {
+        "id": 26101,
+        "name": "maruti raj choudhary"
+    },
+    "isGstInvoice": null,
+    "businessName": null,
+    "gstNo": null
+}

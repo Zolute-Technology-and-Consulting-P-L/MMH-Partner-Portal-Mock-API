@@ -1,0 +1,131 @@
+{
+    "createdBy": 141,
+    "customer": {
+        "id": 6959,
+        "name": "maruti choudhary"
+    },
+    "pricing": {
+        "discountAmount": 0,
+        "taxes": [],
+        "grossAmount": 0,
+        "netAmount": 0
+    },
+    "couponCode": "",
+    "referralCode": "",
+    "modifiedTime": 1615976994,
+    "currency": "INR",
+    "plot": {
+        "numberOfRooms": "",
+        "budget": "",
+        "length": "60",
+        "type": "RESD",
+        "floors": 3,
+        "notes": "",
+        "builtUpArea": 7200,
+        "direction": "SE",
+        "width": 60,
+        "sketch": "",
+        "siteImage": []
+    },
+    "creationTime": 1615969069,
+    "products": [
+        {
+            "description": "test description",
+            "name": "floor plan",
+            "pricing": {
+                "extra_option": 500,
+                "currency": "INR",
+                "price": 4400,
+                "immediate_delivery": 500
+            },
+            "inclusions": [],
+            "addons": [
+                {
+                    "description": null,
+                    "name": "3D Floor Plan",
+                    "id": 5,
+                    "addons": [],
+                    "category": {
+                        "ID": 2,
+                        "parentID": 1,
+                        "name": "Residential"
+                    },
+                    "pricing": [],
+                    "taxes": [
+                        {
+                            "value": 9,
+                            "isPercentage": true,
+                            "name": "CGST"
+                        },
+                        {
+                            "value": 9,
+                            "name": "SGST",
+                            "isPercentage": true
+                        }
+                    ],
+                    "inclusions": [],
+                    "type": "ADDN"
+                },
+                {
+                    "name": "Coloured Layout Plan",
+                    "id": 6,
+                    "type": "ADDN",
+                    "taxes": [],
+                    "inclusions": [],
+                    "pricing": [],
+                    "description": null,
+                    "addons": [],
+                    "category": {
+                        "ID": 2,
+                        "parentID": 1,
+                        "name": "Residential"
+                    }
+                }
+            ],
+            "category": {
+                "parentID": 1,
+                "name": "Residential",
+                "ID": 2
+            },
+            "id": 2,
+            "taxes": [
+                {
+                    "isPercentage": true,
+                    "name": "CGST",
+                    "value": 9
+                },
+                {
+                    "value": 9,
+                    "isPercentage": true,
+                    "name": "SGST"
+                }
+            ],
+            "type": "STND"
+        },
+        {
+            "type": "STND",
+            "name": "Working Drawings",
+            "description": null,
+            "id": 11,
+            "addons": [],
+            "pricing": {
+                "extra_option": 500,
+                "currency": "INR",
+                "immediate_delivery": 500,
+                "price": 4400
+            },
+            "inclusions": [],
+            "taxes": [],
+            "category": {
+                "name": "Residential",
+                "parentID": 1,
+                "ID": 2
+            }
+        }
+    ],
+    "ordeCode": "V2O202201040002",
+    "relatedDesigns": [],
+    "type": "",
+    "direction": "",
+    "id": 19
+}

@@ -1,0 +1,77 @@
+{
+    "ordeCode": "V2O202201040002",
+    "modifiedTime": 1616411349,
+    "plot": {
+        "budget": "",
+        "builtUpArea": 2400,
+        "type": "RESD",
+        "width": 40,
+        "sketch": "",
+        "notes": "",
+        "direction": "SE",
+        "floors": 3,
+        "length": "60",
+        "numberOfRooms": "",
+        "siteImage": []
+    },
+    "customer": {
+        "id": 7138,
+        "name": "maruti raj choudhary"
+    },
+    "pricing": {
+        "discountAmount": 0,
+        "grossAmount": 0,
+        "taxes": [],
+        "netAmount": 0
+    },
+    "creationTime": 1616150880,
+    "id": 26,
+    "direction": "",
+    "relatedDesigns": [],
+    "referralCode": "",
+    "createdBy": 141,
+    "currency": "INR",
+    "couponCode": "",
+    "products": [
+        {
+            "additionalOption": true,
+            "priority": 1,
+            "instantDelivery": true,
+            "id": 11,
+            "activationAmount": 5400,
+            "pricing": {
+                "totalAmount": 5400,
+                "price": 4400,
+                "instantDelivery": 500,
+                "additionalOption": 500,
+                "taxes": []
+            }
+        },
+        {
+            "pricing": {
+                "price": 4400,
+                "taxes": [
+                    {
+                        "name": "CGST",
+                        "amount": 396,
+                        "value": "9%"
+                    },
+                    {
+                        "amount": 396,
+                        "value": "9%",
+                        "name": "SGST"
+                    }
+                ],
+                "instantDelivery": 500,
+                "additionalOption": 0,
+                "totalAmount": 5692
+            },
+            "priority": 2,
+            "activationAmount": 11092,
+            "additionalOption": false,
+            "id": 2,
+            "instantDelivery": true
+        }
+    ],
+    "type": ""
+}

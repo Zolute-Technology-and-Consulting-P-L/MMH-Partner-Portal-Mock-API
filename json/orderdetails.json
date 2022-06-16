@@ -1,0 +1,57 @@
+{
+    "orderID": 5860,
+    "orderCode": "V2O202204270002",
+    "orderedAt": "27-04-2022",
+    "projectName": "",
+    "orderPaymentMode": null,
+    "orderType": "",
+    "noOfFloors": 3,
+    "orderAmount": 17254.22,
+    "orderGstAmount": 2745.78,
+    "orderTotalAmount": 20000,
+    "ispaid": 0,
+    "customer": {
+        "firstName": "ajay",
+        "lastName": "patidar",
+        "isd_code": "91",
+        "phoneNumber": "8085970016",
+        "ID": "51427"
+    },
+    "orderStatus": "Pending Client Approval",
+    "version": "v2",
+    "payments": [],
+    "services": [
+        {
+            "id": 1,
+            "servicename": "2D Elevation",
+            "priority": 1,
+            "price": 3050.84,
+            "gst": 549.16,
+            "instant_delivery": 500,
+            "additional_option": 500,
+            "total_amount": 4600,
+            "discount": 0,
+            "activation_amount": 4400,
+            "isActive": false
+        },
+        {
+            "id": 2,
+            "servicename": "3D Elevation",
+            "priority": 2,
+            "price": 12203.38,
+            "gst": 2196.62,
+            "instant_delivery": 500,
+            "additional_option": 500,
+            "total_amount": 15400,
+            "discount": 0,
+            "activation_amount": 0,
+            "isActive": false
+        }
+    ],
+    "installments": [
+        {
+            "id": 1,
+            "amount": 4400
+        }
+    ]
+}

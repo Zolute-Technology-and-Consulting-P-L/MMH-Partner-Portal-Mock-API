@@ -1,0 +1,34 @@
+{
+    "totalRecords": 3,
+    "customers": [
+        {
+        "userID": 6982,
+        "firstname": "kian",
+        "lastname": "choudhary",
+        "email": null,
+        "contact": "9993641702",
+        "linkStatus":"direct"
+        
+        
+    },
+        {
+        "userID": 6982,
+        "firstname": "kian",
+        "lastname": "choudhary",
+        "email": null,
+        "contact": "9993641702",
+        "linkStatus":"direct"
+        
+    },
+        {
+        "userID": 6982,
+        "firstname": "kian",
+        "lastname": "choudhary",
+        "email": null,
+        "contact": "9993641702",
+        "linkStatus":"direct"
+        
+    }
+       
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "orderID": 36,
+    "designOrderID": 1570,
+    "isServicesAdded": true,
+    "isOrderRelationCreated": true,
+    "order": {
+        "products": [
+            {
+                "pricing": {
+                    "additionalOption": 500,
+                    "price": 4400,
+                    "taxes": [],
+                    "instantDelivery": 500,
+                    "totalAmount": 5400
+                },
+                "additionalOption": true,
+                "instantDelivery": true,
+                "name": "Working Drawings",
+                "description": null,
+                "priority": 1,
+                "id": 11,
+                "activationAmount": 5400
+            },
+            {
+                "activationAmount": 15492,
+                "pricing": {
+                    "instantDelivery": 500,
+                    "totalAmount": 5692,
+                    "additionalOption": 0,
+                    "price": 4400,
+                    "taxes": [
+                        {
+                            "amount": 396,
+                            "value": "9%",
+                            "name": "CGST"
+                        },
+                        {
+                            "name": "SGST",
+                            "value": "9%",
+                            "amount": 396
+                        }
+                    ]
+                },
+                "name": "floor plan",
+                "priority": 2,
+                "id": 2,
+                "description": "test description",
+                "instantDelivery": true,
+                "additionalOption": false
+            },
+            {
+                "additionalOption": false,
+                "description": null,
+                "name": "Structure Drawing",
+                "pricing": {
+                    "totalAmount": 4400,
+                    "additionalOption": 0,
+                    "instantDelivery": 0,
+                    "price": 4400,
+                    "taxes": []
+                },
+                "instantDelivery": false,
+                "id": 12,
+                "activationAmount": 15492,
+                "priority": 3
+            }
+        ],
+        "createdBy": 141,
+        "referralCode": "",
+        "pricing": {
+            "grossAmount": 14700,
+            "gstAmount": 792,
+            "netAmount": 15492
+        },
+        "plot": {
+            "floors": 3,
+            "numberOfRooms": "",
+            "siteImage": [],
+            "budget": "",
+            "length": 50,
+            "direction": "N",
+            "builtUpArea": 6000,
+            "notes": "",
+            "sketch": "",
+            "width": 40,
+            "type": "RESD"
+        },
+        "id": 36,
+        "direction": "",
+        "couponCode": "",
+        "modifiedTime": 1616483231,
+        "creationTime": 1616482000,
+        "type": "",
+        "currency": "INR",
+        "customer": {
+            "name": "maruti raj choudhary",
+            "id": 7138
+        },
+        "relatedDesigns": [],
+        "ordeCode": "V2O202201040002"
+    }
+}

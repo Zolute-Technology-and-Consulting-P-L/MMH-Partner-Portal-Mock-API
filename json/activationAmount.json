@@ -1,0 +1,70 @@
+[
+    {
+        "id": 54,
+        "addons": [
+            12,
+            23
+        ],
+        "instantDelivery": true,
+        "additionalOption": true,
+        "priority": 1,
+        "pricing": {
+            "price": 4400,
+            "extra_option": 500,
+            "immediate_delivery": 500,
+            "currency": "INR"
+        },
+        "activationAmount": 4400
+    },
+    {
+        "id": 55,
+        "addons": [
+            12,
+            23
+        ],
+        "instantDelivery": true,
+        "additionalOption": true,
+        "priority": 2,
+        "pricing": {
+            "price": 4400,
+            "extra_option": 500,
+            "immediate_delivery": 500,
+            "currency": "INR"
+        },
+        "activationAmount": 8800
+    },
+    {
+        "id": 57,
+        "addons": [
+            12,
+            23
+        ],
+        "instantDelivery": true,
+        "additionalOption": true,
+        "priority": 3,
+        "pricing": {
+            "price": 4400,
+            "extra_option": 500,
+            "immediate_delivery": 500,
+            "currency": "INR"
+        },
+        "activationAmount": 17600
+    },
+    {
+        "id": 56,
+        "addons": [
+            12,
+            23
+        ],
+        "instantDelivery": true,
+        "additionalOption": true,
+        "priority": 4,
+        "pricing": {
+            "price": 4400,
+            "extra_option": 500,
+            "immediate_delivery": 500,
+            "currency": "INR"
+        },
+        "activationAmount": 17600
+    }
+]

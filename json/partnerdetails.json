@@ -1,0 +1,24 @@
+{
+    "userDetails": {
+        "userID": 6982,
+        "firstname": "kian",
+        "lastname": "choudhary",
+        "email": null,
+        "contact": "9993641702",
+        "userCategoryID": 6,
+        "currency":"INR"
+        
+    },
+    "partnerDetails":{
+    "commission":{
+    "direct":20,
+    "indirect":10
+    },
+    "maturity":10,
+    "withdrawal":{
+    "min":1200,
+    "max":2000
+    }
+    },
+    "token": "df2b39de2a13048e3f3eee9209abc2b8"
+}
