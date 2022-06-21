@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get('/partner/customer', function (req, res) {
+app.get('/partner/customer/', function (req, res) {
    fs.readFile( __dirname + "/" + "json/customers.json", 'utf8', function (err, data) {
      
       res.send( data );
@@ -61,14 +61,26 @@ app.post('partner/orderv2/activationAmount/:orderID', function (req, res) {
       res.send( data );
    });
 })
-app.get('partner/Orderv2', function (req, res) {
+app.get('partner/orderv2', function (req, res) {
    fs.readFile( __dirname + "/" + "json/orderlist.json", 'utf8', function (err, data) {
      
       res.send( data ); 
    });
 })
-app.get('partner/Orderv2/:orderCode', function (req, res) {
+app.get('partner/orderv2/:orderCode', function (req, res) {
    fs.readFile( __dirname + "/" + "json/orderdetails.json", 'utf8', function (err, data) {
+     
+      res.send( data );
+   });
+})
+app.get('/public/productsv2/:orderid', function (req, res) {
+   fs.readFile( __dirname + "/" + "json/productsv2.json", 'utf8', function (err, data) {
+     
+      res.send( data );
+   });
+})
+app.get('/partner/customer/leads/', function (req, res) {
+   fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
      
       res.send( data );
    });
@@ -97,7 +109,7 @@ app.get('/partner/Commission/withdrawalRequest/', function (req, res) {
       res.send( data );
    });
 })
-app.post('/partner/Customer/', function (req, res) {
+app.post('/partner/customer', function (req, res) {
    fs.readFile( __dirname + "/" + "json/customerdetails.json", 'utf8', function (err, data) {
      
       res.send( data );
@@ -148,18 +160,7 @@ app.post('partner/customer/link', function (req, res) {
    }
  
 })
-app.get('public/productsv2/:id', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/productsv2.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
-})
-app.get('partner/customer/leads/', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
-})
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
    console.log('server listen');
