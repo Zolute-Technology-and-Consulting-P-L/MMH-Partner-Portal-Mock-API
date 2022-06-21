@@ -14,10 +14,18 @@ app.get('/partner/customer/', function (req, res) {
    });
 })
 app.get('/partner/customer/:id', function (req, res) {
+   if(req.params.id=="leads"){
+      fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
+     
+         res.send( data );
+      });
+   }else{
+    
    fs.readFile( __dirname + "/" + "json/customer.json", 'utf8', function (err, data) {
      
       res.send( data );
    });
+   }
 })
 app.post('/partner/orderv2', function (req, res) {
    fs.readFile( __dirname + "/" + "json/draftOrderCreate.json", 'utf8', function (err, data) {
@@ -80,12 +88,7 @@ app.get('/public/productsv2/:orderid', function (req, res) {
       res.send( data );
    });
 })
-app.get('/partner/customer/leads/', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
-})
+
 app.get('/partner/Commission', function (req, res) {
    fs.readFile( __dirname + "/" + "json/Commission.json", 'utf8', function (err, data) {
      
