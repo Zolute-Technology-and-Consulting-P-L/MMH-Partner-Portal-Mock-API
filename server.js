@@ -154,7 +154,12 @@ app.get('public/productsv2/:id', function (req, res) {
       res.send( data );
    });
 })
-
+app.get('partner/customer/leads/', function (req, res) {
+   fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
+     
+      res.send( data );
+   });
+})
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
    console.log('server listen');
