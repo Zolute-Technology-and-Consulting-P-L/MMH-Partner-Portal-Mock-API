@@ -61,7 +61,7 @@ app.post('partner/orderv2/activationAmount/:orderID', function (req, res) {
 app.get('partner/Orderv2', function (req, res) {
    fs.readFile( __dirname + "/" + "json/orderlist.json", 'utf8', function (err, data) {
      
-      res.send( data );
+      res.send( data ); 
    });
 })
 app.get('partner/Orderv2/:orderCode', function (req, res) {
@@ -124,7 +124,12 @@ app.post('partner/customer/link', function (req, res) {
       res.send( data );
    });
 })
-
+app.get('public/productsv2/:id', function (req, res) {
+   fs.readFile( __dirname + "/" + "json/productsv2.json", 'utf8', function (err, data) {
+     
+      res.send( data );
+   });
+})
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

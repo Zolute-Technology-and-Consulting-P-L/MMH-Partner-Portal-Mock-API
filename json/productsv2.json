@@ -1,0 +1,3310 @@
+[
+    {
+        "id": 12,
+        "name": "House Design Package",
+        "description": null,
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "BNDL",
+        "addons": [],
+        "inclusions": [
+            {
+                "id": 1,
+                "name": "Floor Plan",
+                "description": "Floor Plan /Layout plan with Basic furniture layout",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of planning, if plots orientation or facing is changed, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if there is any modification in the requirement sheet in terms of adding or subtracting requirements, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if plot dimensions are changed, the client has to pay an extra amount.</li>\r\n<li>If a client needs changes in the drawing post approval of that drawing, it will be done with additional payment.</li>\r\n<li>Approximate Built-up area shall be informed by the client pre initiation of planning. (In req. sheet)</li>\r\n<li>Post initiation of planning, If Vaastu choice is changed, it will be done by additional payment.</li>\r\n<li>Setbacks (area to be let vacant as per Govt. rules)/FAR/FSI shall be informed by the client pre initiation of planning; Masons mark Pvt Ltd shall not be responsible for providing plan as per municipal corporations or the development authority of India. (In req sheet)</li>\r\n<li>Makemyhouse.com is not responsible for any plan approval from municipal corporations or the development authority of India.</li>\r\n<li>Drawings will be provided as per TAT (Turn Around Time) approved by the client pre initiation of planning.</li>\r\n<li>TAT may be changed in case of any uncertainty from the Technical Department, the same will be informed prior.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/1",
+                "addons": [
+                    {
+                        "id": 7,
+                        "name": "3D Floor Plan",
+                        "description": "3d View of Floor plan or 3D floor plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3D floor plan is a 3D representation of floor planning, 3D Render image will be shown till lintel level height.</li>\r\n<li>2D Floor plan is pre requisite to execute 3D floor plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, fabric & wall colors etc shall only be entertained.</li>\r\n<li>3D floor plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/7",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3D Rendered Floor plan will be shown till lintel level.",
+                            "Furniture placements will be shown as per vastu order.",
+                            "3D Floor Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 8,
+                        "name": "Coloured Layout Plan",
+                        "description": " Photoshop Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3Colored layout plan is a photoshop representation of floor planning, it is a 2D representation with furniture layout in color format.</li>\r\n<li>2D Floor plan is pre requisite to execute Colored layout plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, landscape design & furniture color shall only be entertained.</li>\r\n<li>Colored layout plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/8",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2-D Photoshop Plan with furniture arrangements",
+                            "Furniture placements will be shown as per vastu order",
+                            "3-4 changes shall be provided as per given commitment",
+                            "Coloured Layout Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 21,
+                        "name": "landscaping 2D",
+                        "description": "Non Dimensional 2d Landscapping Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 22,
+                        "name": "landscaping 3D",
+                        "description": "Non Dimensional 3D Landscapping Plan or bird eye view ",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 23,
+                        "name": "Blueprint ( approval plan)",
+                        "description": "Blue print is combination of Engineering drawings for plan approval or loan purpose ( As per client format if needed )",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 24,
+                        "name": "Detailed landscaping with dimension",
+                        "description": "Landscaping with detailed dimensions 2D and 3D View",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 5200,
+                    "extra_option": 500,
+                    "immediate_delivery": 500,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Furniture Layout plan",
+                    "2-D Layout Plan",
+                    "Vastu consultancy",
+                    "Floor Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Modern 3D Elevation",
+                "description": "Modern or Ultra-Modern Pattern means use of geometrical figurs, stone tiles or glass in design ",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/2",
+                "addons": [
+                    {
+                        "id": 11,
+                        "name": "2D Elevation",
+                        "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2D Elevation Design",
+                            "Working drawing as per 3D Elevation will be provided"
+                        ]
+                    },
+                    {
+                        "id": 10,
+                        "name": "Elevation Right side view",
+                        "description": "Right side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "Top view of Elevation in 3D will be provided"
+                        ]
+                    },
+                    {
+                        "id": 25,
+                        "name": "Elevation Left side view",
+                        "description": "Left side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 26,
+                        "name": "Elevation Back side view",
+                        "description": "Back side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 27,
+                        "name": "Elevation Corner view",
+                        "description": "Corner View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 28,
+                        "name": "Elevation Night view",
+                        "description": "Night view of Building with lighting effect",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 9,
+                        "name": "Elevation All Side views",
+                        "description": "All Four side prespective view of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3-D Elevation for any 1 side will be provided. (Perspective view)"
+                        ]
+                    },
+                    {
+                        "id": 29,
+                        "name": "Elevation Bird eye View",
+                        "description": "Bird Eye View Of Building,Elevation visible from a particualr height like bird vision",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3-D Elevation (Perspective view)",
+                    "3-D Elevation with 5-6 changes"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Working Drawings",
+                "description": "Dimension Plan, Section Drawing, Toilet Standard Detail's, Kitchen Standard Detail's, Door's & Window's Detail's, Electrical Layout ",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Pre initiation of drawing, client has to prior inform regarding Septic tank availability in their society or colony. ( in req sheet)</li>\r\n<li>Pre initiation of drawing, client has to inform regarding capacity of water tank.( in req sheet).</li>\r\n<li>Pre initiation of drawing, client has to inform, If he needs provision of hot water and cold water. ( in req sheet).</li>\r\n<li>No AC( Air condition) , solar paneling, Home automation, Security solutions designs will be provided under given package.</li>\r\n<li>Electrical Looping details are not included in the given package.</li>\r\n<li>Without column and beam details, Electrical and plumbing drawings shall not be initiated.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/3",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Dimension plan",
+                    "Door Window details",
+                    "Concept Kitchen And Toilet details with legend for knowledge",
+                    "Section Drawings",
+                    "Area statement"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Structure Drawing",
+                "description": "We provide Frame RCC structure design using IS code for respective zone and soil type",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Structure design shall only be provided against the amount taken for commited no. of floors.</li>\r\n<li>Structure design shall only be provided against the planning done for commited no. of floors.</li>\r\n<li>It is the solely responsibility of client to prior inform about the soil condition of area against which planning/Structural work is received. ( MMH team will coordinate for the same).</li>\r\n<li>Type of Foundation ( Eg: Isometric/Pile etc ) shall be prior discussed with Structural Engineer of makemyhouse. ( MMH team will coordinate for the same)</li>\r\n<li>Load bearing structure will not be provided by makemyhouse by any hook or force.</li>\r\n<li>In case of renovation, If existing building is built on Load bearing structure, Makemyhouse shall not responsible for Providing any further Structure drawing on the same.</li>\r\n<li>Number of columns and beam grids shall only be decided or approved by our structural engineer as per technical feasibility.</li>\r\n<li>In case of any changes on site is done without prior information or approval by Makemyhouse Technical Team. Makemyhouse shall not be responsible for any damage or loss incurred by the client.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/4",
+                "addons": [
+                    {
+                        "id": 44,
+                        "name": "BBS drawings",
+                        "description": "With the help of bar bending schedule the requirement of different length and sizes of bars may be known and can be arranged and bent-up during the time of construction",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 9500,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Centre Line plan",
+                    "Column details and its reinforcement",
+                    "Foundation detail and Footing plan (as per site condition if soil report is received)",
+                    "Plinth Beam Details",
+                    "Lintel Details as per intermediate space",
+                    "Slab Design and its reinforcement detail",
+                    "Beam Design and its reinforcement details as per drawings",
+                    "Staircase Design and its sections if required"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Plumbing/Drainage",
+                "description": "Waster water and drain water supply of Building with water tank and septic tank capacity as per need",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Pre initiation of drawing, client has to prior inform regarding Septic tank availability in their society or colony. ( in req sheet)</li>\r\n<li>Pre initiation of drawing, client has to inform regarding capacity of water tank.( in req sheet).</li>\r\n<li>Pre initiation of drawing, client has to inform, If he needs provision of hot water and cold water. ( in req sheet).</li>\r\n<li>No AC( Air condition) , solar paneling, Home automation, Security solutions designs will be provided under given package.</li>\r\n<li>Electrical Looping details are not included in the given package.</li>\r\n<li>Without column and beam details, Electrical and plumbing drawings shall not be initiated.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/5",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 5200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Under Ground Water tank details",
+                    "OHWT details",
+                    "Drainage: Includes placement of chambers, waste pipes etc from toilets till outlet and Septic Tank Details (if required)",
+                    "Plumbing: Includes all pipe line layout from Tank to all faucets & taps",
+                    "Rain Water and Drain Water Management if required",
+                    "Electrical: Includes electrical layout of each and every room with switch board, light, fan etc positions."
+                ]
+            },
+            {
+                "id": 11,
+                "name": "2D Elevation",
+                "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "2D Elevation Design",
+                    "Working drawing as per 3D Elevation will be provided"
+                ]
+            }
+        ],
+        "pricing": {
+            "price": 23500,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "2D Layout Plan",
+            "3-D Elevation",
+            "2-D Elevation",
+            "Working Drawings",
+            "Structure Drawings",
+            "Electrical, Plumbing, Drainage Drawings"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Premium House Design Package",
+        "description": null,
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "BNDL",
+        "addons": [],
+        "inclusions": [
+            {
+                "id": 1,
+                "name": "Floor Plan",
+                "description": "Floor Plan /Layout plan with Basic furniture layout",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of planning, if plots orientation or facing is changed, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if there is any modification in the requirement sheet in terms of adding or subtracting requirements, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if plot dimensions are changed, the client has to pay an extra amount.</li>\r\n<li>If a client needs changes in the drawing post approval of that drawing, it will be done with additional payment.</li>\r\n<li>Approximate Built-up area shall be informed by the client pre initiation of planning. (In req. sheet)</li>\r\n<li>Post initiation of planning, If Vaastu choice is changed, it will be done by additional payment.</li>\r\n<li>Setbacks (area to be let vacant as per Govt. rules)/FAR/FSI shall be informed by the client pre initiation of planning; Masons mark Pvt Ltd shall not be responsible for providing plan as per municipal corporations or the development authority of India. (In req sheet)</li>\r\n<li>Makemyhouse.com is not responsible for any plan approval from municipal corporations or the development authority of India.</li>\r\n<li>Drawings will be provided as per TAT (Turn Around Time) approved by the client pre initiation of planning.</li>\r\n<li>TAT may be changed in case of any uncertainty from the Technical Department, the same will be informed prior.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/1",
+                "addons": [
+                    {
+                        "id": 7,
+                        "name": "3D Floor Plan",
+                        "description": "3d View of Floor plan or 3D floor plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3D floor plan is a 3D representation of floor planning, 3D Render image will be shown till lintel level height.</li>\r\n<li>2D Floor plan is pre requisite to execute 3D floor plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, fabric & wall colors etc shall only be entertained.</li>\r\n<li>3D floor plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/7",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3D Rendered Floor plan will be shown till lintel level.",
+                            "Furniture placements will be shown as per vastu order.",
+                            "3D Floor Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 8,
+                        "name": "Coloured Layout Plan",
+                        "description": " Photoshop Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3Colored layout plan is a photoshop representation of floor planning, it is a 2D representation with furniture layout in color format.</li>\r\n<li>2D Floor plan is pre requisite to execute Colored layout plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, landscape design & furniture color shall only be entertained.</li>\r\n<li>Colored layout plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/8",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2-D Photoshop Plan with furniture arrangements",
+                            "Furniture placements will be shown as per vastu order",
+                            "3-4 changes shall be provided as per given commitment",
+                            "Coloured Layout Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 21,
+                        "name": "landscaping 2D",
+                        "description": "Non Dimensional 2d Landscapping Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 22,
+                        "name": "landscaping 3D",
+                        "description": "Non Dimensional 3D Landscapping Plan or bird eye view ",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 23,
+                        "name": "Blueprint ( approval plan)",
+                        "description": "Blue print is combination of Engineering drawings for plan approval or loan purpose ( As per client format if needed )",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 24,
+                        "name": "Detailed landscaping with dimension",
+                        "description": "Landscaping with detailed dimensions 2D and 3D View",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 5200,
+                    "extra_option": 500,
+                    "immediate_delivery": 500,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Furniture Layout plan",
+                    "2-D Layout Plan",
+                    "Vastu consultancy",
+                    "Floor Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Modern 3D Elevation",
+                "description": "Modern or Ultra-Modern Pattern means use of geometrical figurs, stone tiles or glass in design ",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/2",
+                "addons": [
+                    {
+                        "id": 11,
+                        "name": "2D Elevation",
+                        "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2D Elevation Design",
+                            "Working drawing as per 3D Elevation will be provided"
+                        ]
+                    },
+                    {
+                        "id": 10,
+                        "name": "Elevation Right side view",
+                        "description": "Right side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "Top view of Elevation in 3D will be provided"
+                        ]
+                    },
+                    {
+                        "id": 25,
+                        "name": "Elevation Left side view",
+                        "description": "Left side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 26,
+                        "name": "Elevation Back side view",
+                        "description": "Back side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 27,
+                        "name": "Elevation Corner view",
+                        "description": "Corner View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 28,
+                        "name": "Elevation Night view",
+                        "description": "Night view of Building with lighting effect",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 9,
+                        "name": "Elevation All Side views",
+                        "description": "All Four side prespective view of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3-D Elevation for any 1 side will be provided. (Perspective view)"
+                        ]
+                    },
+                    {
+                        "id": 29,
+                        "name": "Elevation Bird eye View",
+                        "description": "Bird Eye View Of Building,Elevation visible from a particualr height like bird vision",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3-D Elevation (Perspective view)",
+                    "3-D Elevation with 5-6 changes"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Working Drawings",
+                "description": "Dimension Plan, Section Drawing, Toilet Standard Detail's, Kitchen Standard Detail's, Door's & Window's Detail's, Electrical Layout ",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Pre initiation of drawing, client has to prior inform regarding Septic tank availability in their society or colony. ( in req sheet)</li>\r\n<li>Pre initiation of drawing, client has to inform regarding capacity of water tank.( in req sheet).</li>\r\n<li>Pre initiation of drawing, client has to inform, If he needs provision of hot water and cold water. ( in req sheet).</li>\r\n<li>No AC( Air condition) , solar paneling, Home automation, Security solutions designs will be provided under given package.</li>\r\n<li>Electrical Looping details are not included in the given package.</li>\r\n<li>Without column and beam details, Electrical and plumbing drawings shall not be initiated.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/3",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Dimension plan",
+                    "Door Window details",
+                    "Concept Kitchen And Toilet details with legend for knowledge",
+                    "Section Drawings",
+                    "Area statement"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Structure Drawing",
+                "description": "We provide Frame RCC structure design using IS code for respective zone and soil type",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Structure design shall only be provided against the amount taken for commited no. of floors.</li>\r\n<li>Structure design shall only be provided against the planning done for commited no. of floors.</li>\r\n<li>It is the solely responsibility of client to prior inform about the soil condition of area against which planning/Structural work is received. ( MMH team will coordinate for the same).</li>\r\n<li>Type of Foundation ( Eg: Isometric/Pile etc ) shall be prior discussed with Structural Engineer of makemyhouse. ( MMH team will coordinate for the same)</li>\r\n<li>Load bearing structure will not be provided by makemyhouse by any hook or force.</li>\r\n<li>In case of renovation, If existing building is built on Load bearing structure, Makemyhouse shall not responsible for Providing any further Structure drawing on the same.</li>\r\n<li>Number of columns and beam grids shall only be decided or approved by our structural engineer as per technical feasibility.</li>\r\n<li>In case of any changes on site is done without prior information or approval by Makemyhouse Technical Team. Makemyhouse shall not be responsible for any damage or loss incurred by the client.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/4",
+                "addons": [
+                    {
+                        "id": 44,
+                        "name": "BBS drawings",
+                        "description": "With the help of bar bending schedule the requirement of different length and sizes of bars may be known and can be arranged and bent-up during the time of construction",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 9500,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Centre Line plan",
+                    "Column details and its reinforcement",
+                    "Foundation detail and Footing plan (as per site condition if soil report is received)",
+                    "Plinth Beam Details",
+                    "Lintel Details as per intermediate space",
+                    "Slab Design and its reinforcement detail",
+                    "Beam Design and its reinforcement details as per drawings",
+                    "Staircase Design and its sections if required"
+                ]
+            },
+            {
+                "id": 7,
+                "name": "3D Floor Plan",
+                "description": "3d View of Floor plan or 3D floor plan",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>3D floor plan is a 3D representation of floor planning, 3D Render image will be shown till lintel level height.</li>\r\n<li>2D Floor plan is pre requisite to execute 3D floor plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, fabric & wall colors etc shall only be entertained.</li>\r\n<li>3D floor plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/7",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 2400,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3D Rendered Floor plan will be shown till lintel level.",
+                    "Furniture placements will be shown as per vastu order.",
+                    "3D Floor Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Plumbing/Drainage",
+                "description": "Waster water and drain water supply of Building with water tank and septic tank capacity as per need",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Pre initiation of drawing, client has to prior inform regarding Septic tank availability in their society or colony. ( in req sheet)</li>\r\n<li>Pre initiation of drawing, client has to inform regarding capacity of water tank.( in req sheet).</li>\r\n<li>Pre initiation of drawing, client has to inform, If he needs provision of hot water and cold water. ( in req sheet).</li>\r\n<li>No AC( Air condition) , solar paneling, Home automation, Security solutions designs will be provided under given package.</li>\r\n<li>Electrical Looping details are not included in the given package.</li>\r\n<li>Without column and beam details, Electrical and plumbing drawings shall not be initiated.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/5",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 5200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Under Ground Water tank details",
+                    "OHWT details",
+                    "Drainage: Includes placement of chambers, waste pipes etc from toilets till outlet and Septic Tank Details (if required)",
+                    "Plumbing: Includes all pipe line layout from Tank to all faucets & taps",
+                    "Rain Water and Drain Water Management if required",
+                    "Electrical: Includes electrical layout of each and every room with switch board, light, fan etc positions."
+                ]
+            },
+            {
+                "id": 6,
+                "name": "BOQ for loan approval",
+                "description": "Rough Bill of quantity is provided for LOAN PURPOSE ONLY, carries approx rates of materials (Excludes detail bifurcation of same material like steel diameter )",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>This BOQ is as for BANK LOAN purpose only and quantities are adjusted as per loan requirements.</li>\r\n<li>No material quantities will be provided for material purchase.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/6",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 3600,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Total Construction Cost as per given designs• Complete Material detail along with Quantity",
+                    "Detailed Labor Cost including civil and other jobs"
+                ]
+            },
+            {
+                "id": 17,
+                "name": "Material Quantity",
+                "description": "Material Quantity includes basic calculation civil materials used in building ,make purchasing easy to individual customer (Excludes detail bifurcation of same material like steel diameter )",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Material quantities are on approximate calculations and may vary as per local geographic and market conditions</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/17",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 7100,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Quantity for purchasing the materials"
+                ]
+            },
+            {
+                "id": 11,
+                "name": "2D Elevation",
+                "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "2D Elevation Design",
+                    "Working drawing as per 3D Elevation will be provided"
+                ]
+            },
+            {
+                "id": 9,
+                "name": "Elevation All Side views",
+                "description": "All Four side prespective view of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 2400,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3-D Elevation for any 1 side will be provided. (Perspective view)"
+                ]
+            }
+        ],
+        "pricing": {
+            "price": 38000,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": []
+    },
+    {
+        "id": 16,
+        "name": "Presentation Plan",
+        "description": null,
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "BNDL",
+        "addons": [],
+        "inclusions": [
+            {
+                "id": 1,
+                "name": "Floor Plan",
+                "description": "Floor Plan /Layout plan with Basic furniture layout",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of planning, if plots orientation or facing is changed, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if there is any modification in the requirement sheet in terms of adding or subtracting requirements, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if plot dimensions are changed, the client has to pay an extra amount.</li>\r\n<li>If a client needs changes in the drawing post approval of that drawing, it will be done with additional payment.</li>\r\n<li>Approximate Built-up area shall be informed by the client pre initiation of planning. (In req. sheet)</li>\r\n<li>Post initiation of planning, If Vaastu choice is changed, it will be done by additional payment.</li>\r\n<li>Setbacks (area to be let vacant as per Govt. rules)/FAR/FSI shall be informed by the client pre initiation of planning; Masons mark Pvt Ltd shall not be responsible for providing plan as per municipal corporations or the development authority of India. (In req sheet)</li>\r\n<li>Makemyhouse.com is not responsible for any plan approval from municipal corporations or the development authority of India.</li>\r\n<li>Drawings will be provided as per TAT (Turn Around Time) approved by the client pre initiation of planning.</li>\r\n<li>TAT may be changed in case of any uncertainty from the Technical Department, the same will be informed prior.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/1",
+                "addons": [
+                    {
+                        "id": 7,
+                        "name": "3D Floor Plan",
+                        "description": "3d View of Floor plan or 3D floor plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3D floor plan is a 3D representation of floor planning, 3D Render image will be shown till lintel level height.</li>\r\n<li>2D Floor plan is pre requisite to execute 3D floor plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, fabric & wall colors etc shall only be entertained.</li>\r\n<li>3D floor plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/7",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3D Rendered Floor plan will be shown till lintel level.",
+                            "Furniture placements will be shown as per vastu order.",
+                            "3D Floor Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 8,
+                        "name": "Coloured Layout Plan",
+                        "description": " Photoshop Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3Colored layout plan is a photoshop representation of floor planning, it is a 2D representation with furniture layout in color format.</li>\r\n<li>2D Floor plan is pre requisite to execute Colored layout plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, landscape design & furniture color shall only be entertained.</li>\r\n<li>Colored layout plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/8",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2-D Photoshop Plan with furniture arrangements",
+                            "Furniture placements will be shown as per vastu order",
+                            "3-4 changes shall be provided as per given commitment",
+                            "Coloured Layout Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 21,
+                        "name": "landscaping 2D",
+                        "description": "Non Dimensional 2d Landscapping Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 22,
+                        "name": "landscaping 3D",
+                        "description": "Non Dimensional 3D Landscapping Plan or bird eye view ",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 23,
+                        "name": "Blueprint ( approval plan)",
+                        "description": "Blue print is combination of Engineering drawings for plan approval or loan purpose ( As per client format if needed )",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 24,
+                        "name": "Detailed landscaping with dimension",
+                        "description": "Landscaping with detailed dimensions 2D and 3D View",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 5200,
+                    "extra_option": 500,
+                    "immediate_delivery": 500,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Furniture Layout plan",
+                    "2-D Layout Plan",
+                    "Vastu consultancy",
+                    "Floor Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Modern 3D Elevation",
+                "description": "Modern or Ultra-Modern Pattern means use of geometrical figurs, stone tiles or glass in design ",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/2",
+                "addons": [
+                    {
+                        "id": 11,
+                        "name": "2D Elevation",
+                        "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2D Elevation Design",
+                            "Working drawing as per 3D Elevation will be provided"
+                        ]
+                    },
+                    {
+                        "id": 10,
+                        "name": "Elevation Right side view",
+                        "description": "Right side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "Top view of Elevation in 3D will be provided"
+                        ]
+                    },
+                    {
+                        "id": 25,
+                        "name": "Elevation Left side view",
+                        "description": "Left side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 26,
+                        "name": "Elevation Back side view",
+                        "description": "Back side View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 27,
+                        "name": "Elevation Corner view",
+                        "description": "Corner View of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 600,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 28,
+                        "name": "Elevation Night view",
+                        "description": "Night view of Building with lighting effect",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 9,
+                        "name": "Elevation All Side views",
+                        "description": "All Four side prespective view of Building",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3-D Elevation for any 1 side will be provided. (Perspective view)"
+                        ]
+                    },
+                    {
+                        "id": 29,
+                        "name": "Elevation Bird eye View",
+                        "description": "Bird Eye View Of Building,Elevation visible from a particualr height like bird vision",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3-D Elevation (Perspective view)",
+                    "3-D Elevation with 5-6 changes"
+                ]
+            },
+            {
+                "id": 11,
+                "name": "2D Elevation",
+                "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "2D Elevation Design",
+                    "Working drawing as per 3D Elevation will be provided"
+                ]
+            }
+        ],
+        "pricing": {
+            "price": 10600,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": []
+    },
+    {
+        "id": 45,
+        "name": "Plan and Structure Set",
+        "description": null,
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "BNDL",
+        "addons": [],
+        "inclusions": [
+            {
+                "id": 1,
+                "name": "Floor Plan",
+                "description": "Floor Plan /Layout plan with Basic furniture layout",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of planning, if plots orientation or facing is changed, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if there is any modification in the requirement sheet in terms of adding or subtracting requirements, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if plot dimensions are changed, the client has to pay an extra amount.</li>\r\n<li>If a client needs changes in the drawing post approval of that drawing, it will be done with additional payment.</li>\r\n<li>Approximate Built-up area shall be informed by the client pre initiation of planning. (In req. sheet)</li>\r\n<li>Post initiation of planning, If Vaastu choice is changed, it will be done by additional payment.</li>\r\n<li>Setbacks (area to be let vacant as per Govt. rules)/FAR/FSI shall be informed by the client pre initiation of planning; Masons mark Pvt Ltd shall not be responsible for providing plan as per municipal corporations or the development authority of India. (In req sheet)</li>\r\n<li>Makemyhouse.com is not responsible for any plan approval from municipal corporations or the development authority of India.</li>\r\n<li>Drawings will be provided as per TAT (Turn Around Time) approved by the client pre initiation of planning.</li>\r\n<li>TAT may be changed in case of any uncertainty from the Technical Department, the same will be informed prior.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/1",
+                "addons": [
+                    {
+                        "id": 7,
+                        "name": "3D Floor Plan",
+                        "description": "3d View of Floor plan or 3D floor plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3D floor plan is a 3D representation of floor planning, 3D Render image will be shown till lintel level height.</li>\r\n<li>2D Floor plan is pre requisite to execute 3D floor plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, fabric & wall colors etc shall only be entertained.</li>\r\n<li>3D floor plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/7",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 2400,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "3D Rendered Floor plan will be shown till lintel level.",
+                            "Furniture placements will be shown as per vastu order.",
+                            "3D Floor Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 8,
+                        "name": "Coloured Layout Plan",
+                        "description": " Photoshop Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "servicePolicy": "<ol type=\"1\">\r\n<li>3Colored layout plan is a photoshop representation of floor planning, it is a 2D representation with furniture layout in color format.</li>\r\n<li>2D Floor plan is pre requisite to execute Colored layout plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, landscape design & furniture color shall only be entertained.</li>\r\n<li>Colored layout plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/8",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 1200,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": [
+                            "2-D Photoshop Plan with furniture arrangements",
+                            "Furniture placements will be shown as per vastu order",
+                            "3-4 changes shall be provided as per given commitment",
+                            "Coloured Layout Plan with 5-6 changes"
+                        ]
+                    },
+                    {
+                        "id": 21,
+                        "name": "landscaping 2D",
+                        "description": "Non Dimensional 2d Landscapping Plan",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 22,
+                        "name": "landscaping 3D",
+                        "description": "Non Dimensional 3D Landscapping Plan or bird eye view ",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 3600,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 23,
+                        "name": "Blueprint ( approval plan)",
+                        "description": "Blue print is combination of Engineering drawings for plan approval or loan purpose ( As per client format if needed )",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    },
+                    {
+                        "id": 24,
+                        "name": "Detailed landscaping with dimension",
+                        "description": "Landscaping with detailed dimensions 2D and 3D View",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 4700,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 5200,
+                    "extra_option": 500,
+                    "immediate_delivery": 500,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Furniture Layout plan",
+                    "2-D Layout Plan",
+                    "Vastu consultancy",
+                    "Floor Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Structure Drawing",
+                "description": "We provide Frame RCC structure design using IS code for respective zone and soil type",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "STND",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Structure design shall only be provided against the amount taken for commited no. of floors.</li>\r\n<li>Structure design shall only be provided against the planning done for commited no. of floors.</li>\r\n<li>It is the solely responsibility of client to prior inform about the soil condition of area against which planning/Structural work is received. ( MMH team will coordinate for the same).</li>\r\n<li>Type of Foundation ( Eg: Isometric/Pile etc ) shall be prior discussed with Structural Engineer of makemyhouse. ( MMH team will coordinate for the same)</li>\r\n<li>Load bearing structure will not be provided by makemyhouse by any hook or force.</li>\r\n<li>In case of renovation, If existing building is built on Load bearing structure, Makemyhouse shall not responsible for Providing any further Structure drawing on the same.</li>\r\n<li>Number of columns and beam grids shall only be decided or approved by our structural engineer as per technical feasibility.</li>\r\n<li>In case of any changes on site is done without prior information or approval by Makemyhouse Technical Team. Makemyhouse shall not be responsible for any damage or loss incurred by the client.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/4",
+                "addons": [
+                    {
+                        "id": 44,
+                        "name": "BBS drawings",
+                        "description": "With the help of bar bending schedule the requirement of different length and sizes of bars may be known and can be arranged and bent-up during the time of construction",
+                        "is_tax_inclusive": "1",
+                        "category": {
+                            "ID": 2,
+                            "parentID": 1,
+                            "name": "Residential"
+                        },
+                        "type": "ADDN",
+                        "addons": [],
+                        "inclusions": [],
+                        "pricing": {
+                            "price": 9500,
+                            "extra_option": -1,
+                            "immediate_delivery": -1,
+                            "currency": "INR"
+                        },
+                        "taxes": [
+                            {
+                                "name": "IGST 18%",
+                                "isPercentage": true,
+                                "value": 18
+                            }
+                        ],
+                        "features": []
+                    }
+                ],
+                "inclusions": [],
+                "pricing": {
+                    "price": 6500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Centre Line plan",
+                    "Column details and its reinforcement",
+                    "Foundation detail and Footing plan (as per site condition if soil report is received)",
+                    "Plinth Beam Details",
+                    "Lintel Details as per intermediate space",
+                    "Slab Design and its reinforcement detail",
+                    "Beam Design and its reinforcement details as per drawings",
+                    "Staircase Design and its sections if required"
+                ]
+            }
+        ],
+        "pricing": {
+            "price": 10000,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": []
+    },
+    {
+        "id": 1,
+        "name": "Floor Plan",
+        "description": "Floor Plan /Layout plan with Basic furniture layout",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of planning, if plots orientation or facing is changed, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if there is any modification in the requirement sheet in terms of adding or subtracting requirements, client has to pay an extra amount.</li>\r\n<li>Post initiation of planning, if plot dimensions are changed, the client has to pay an extra amount.</li>\r\n<li>If a client needs changes in the drawing post approval of that drawing, it will be done with additional payment.</li>\r\n<li>Approximate Built-up area shall be informed by the client pre initiation of planning. (In req. sheet)</li>\r\n<li>Post initiation of planning, If Vaastu choice is changed, it will be done by additional payment.</li>\r\n<li>Setbacks (area to be let vacant as per Govt. rules)/FAR/FSI shall be informed by the client pre initiation of planning; Masons mark Pvt Ltd shall not be responsible for providing plan as per municipal corporations or the development authority of India. (In req sheet)</li>\r\n<li>Makemyhouse.com is not responsible for any plan approval from municipal corporations or the development authority of India.</li>\r\n<li>Drawings will be provided as per TAT (Turn Around Time) approved by the client pre initiation of planning.</li>\r\n<li>TAT may be changed in case of any uncertainty from the Technical Department, the same will be informed prior.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/1",
+        "addons": [
+            {
+                "id": 7,
+                "name": "3D Floor Plan",
+                "description": "3d View of Floor plan or 3D floor plan",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>3D floor plan is a 3D representation of floor planning, 3D Render image will be shown till lintel level height.</li>\r\n<li>2D Floor plan is pre requisite to execute 3D floor plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, fabric & wall colors etc shall only be entertained.</li>\r\n<li>3D floor plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/7",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 2400,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3D Rendered Floor plan will be shown till lintel level.",
+                    "Furniture placements will be shown as per vastu order.",
+                    "3D Floor Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 8,
+                "name": "Coloured Layout Plan",
+                "description": " Photoshop Plan",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>3Colored layout plan is a photoshop representation of floor planning, it is a 2D representation with furniture layout in color format.</li>\r\n<li>2D Floor plan is pre requisite to execute Colored layout plan.</li>\r\n<li>No changes in space planning will be done in this service.</li>\r\n<li>Changes related to finishes like floor texture, landscape design & furniture color shall only be entertained.</li>\r\n<li>Colored layout plan shall only be provided for the per floor amount received.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/8",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "2-D Photoshop Plan with furniture arrangements",
+                    "Furniture placements will be shown as per vastu order",
+                    "3-4 changes shall be provided as per given commitment",
+                    "Coloured Layout Plan with 5-6 changes"
+                ]
+            },
+            {
+                "id": 21,
+                "name": "landscaping 2D",
+                "description": "Non Dimensional 2d Landscapping Plan",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 3600,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 22,
+                "name": "landscaping 3D",
+                "description": "Non Dimensional 3D Landscapping Plan or bird eye view ",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 3600,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 23,
+                "name": "Blueprint ( approval plan)",
+                "description": "Blue print is combination of Engineering drawings for plan approval or loan purpose ( As per client format if needed )",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 4700,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 24,
+                "name": "Detailed landscaping with dimension",
+                "description": "Landscaping with detailed dimensions 2D and 3D View",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 4700,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            }
+        ],
+        "inclusions": [],
+        "pricing": {
+            "price": 5200,
+            "extra_option": 500,
+            "immediate_delivery": 500,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Furniture Layout plan",
+            "2-D Layout Plan",
+            "Vastu consultancy",
+            "Floor Plan with 5-6 changes"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Modern 3D Elevation",
+        "description": "Modern or Ultra-Modern Pattern means use of geometrical figurs, stone tiles or glass in design ",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/2",
+        "addons": [
+            {
+                "id": 11,
+                "name": "2D Elevation",
+                "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation \r\n",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "servicePolicy": "<ol type=\"1\">\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of elevation designing. ( MMH team will coordinate for the same).</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+                "servicePolicyUrl": "http://testing.makemyhouse.com/policies/11",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "2D Elevation Design",
+                    "Working drawing as per 3D Elevation will be provided"
+                ]
+            },
+            {
+                "id": 10,
+                "name": "Elevation Right side view",
+                "description": "Right side View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 600,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "Top view of Elevation in 3D will be provided"
+                ]
+            },
+            {
+                "id": 25,
+                "name": "Elevation Left side view",
+                "description": "Left side View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 600,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 26,
+                "name": "Elevation Back side view",
+                "description": "Back side View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 600,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 27,
+                "name": "Elevation Corner view",
+                "description": "Corner View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 600,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 28,
+                "name": "Elevation Night view",
+                "description": "Night view of Building with lighting effect",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 9,
+                "name": "Elevation All Side views",
+                "description": "All Four side prespective view of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 2400,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": [
+                    "3-D Elevation for any 1 side will be provided. (Perspective view)"
+                ]
+            },
+            {
+                "id": 29,
+                "name": "Elevation Bird eye View",
+                "description": "Bird Eye View Of Building,Elevation visible from a particualr height like bird vision",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 2400,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            }
+        ],
+        "inclusions": [],
+        "pricing": {
+            "price": 6500,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "3-D Elevation (Perspective view)",
+            "3-D Elevation with 5-6 changes"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Traditional 3D Elevation",
+        "description": "Traditional pattern elevation as per need, includes architecture in view as carving and molding with heavy labour work ",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Carving precise details are not included in traditional 3D concept Elevation</li>\r\n<li>Post initiation of Elevation design, if style/theme or concept is changed, client has to pay an extra amount.</li>\r\n<li>Sample of elevation design shall be sent by client or approved by client pre initiation of 4) elevation designing. (MMH team will coordinate for the same)</li>\r\n<li>Color in the design may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>Material texture may be slightly varied as shown in electronically generated design and Material available in market.</li>\r\n<li>1st draft of 3D Elevation shall be provided Post approval of Floor Plan.</li>\r\n<li>1st draft of 2D Elevation shall be provided Post approval of 3D Elevation.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/20",
+        "addons": [
+            {
+                "id": 30,
+                "name": "2D Elevation",
+                "description": "2D elevation gives brief detailing of dimension , level and colour code of elevation",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1800,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 31,
+                "name": "Elevation Right side view",
+                "description": "Right side View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 32,
+                "name": "Elevation Left side view",
+                "description": "Left side View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 33,
+                "name": "Elevation Back side view",
+                "description": "Back side View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 34,
+                "name": "Elevation Corner view",
+                "description": "Corner View of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1200,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 35,
+                "name": "Elevation Night view",
+                "description": "Night view of Building with lighting effect",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 1800,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 36,
+                "name": "Elevation All side view",
+                "description": "All Four side prespective view of Building",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 3000,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            },
+            {
+                "id": 37,
+                "name": "Elevation Bird eye View",
+                "description": "Bird Eye View Of Building,Elevation visible from a particualr height like bird vision",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 3000,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            }
+        ],
+        "inclusions": [],
+        "pricing": {
+            "price": 7100,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "3-D Elevation (Perspective view)",
+            "3-D Elevation with 5-6 changes"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Working Drawings",
+        "description": "Dimension Plan, Section Drawing, Toilet Standard Detail's, Kitchen Standard Detail's, Door's & Window's Detail's, Electrical Layout ",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Pre initiation of drawing, client has to prior inform regarding Septic tank availability in their society or colony. ( in req sheet)</li>\r\n<li>Pre initiation of drawing, client has to inform regarding capacity of water tank.( in req sheet).</li>\r\n<li>Pre initiation of drawing, client has to inform, If he needs provision of hot water and cold water. ( in req sheet).</li>\r\n<li>No AC( Air condition) , solar paneling, Home automation, Security solutions designs will be provided under given package.</li>\r\n<li>Electrical Looping details are not included in the given package.</li>\r\n<li>Without column and beam details, Electrical and plumbing drawings shall not be initiated.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/3",
+        "addons": [],
+        "inclusions": [],
+        "pricing": {
+            "price": 6500,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Dimension plan",
+            "Door Window details",
+            "Concept Kitchen And Toilet details with legend for knowledge",
+            "Section Drawings",
+            "Area statement"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Structure Drawing",
+        "description": "We provide Frame RCC structure design using IS code for respective zone and soil type",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Structure design shall only be provided against the amount taken for commited no. of floors.</li>\r\n<li>Structure design shall only be provided against the planning done for commited no. of floors.</li>\r\n<li>It is the solely responsibility of client to prior inform about the soil condition of area against which planning/Structural work is received. ( MMH team will coordinate for the same).</li>\r\n<li>Type of Foundation ( Eg: Isometric/Pile etc ) shall be prior discussed with Structural Engineer of makemyhouse. ( MMH team will coordinate for the same)</li>\r\n<li>Load bearing structure will not be provided by makemyhouse by any hook or force.</li>\r\n<li>In case of renovation, If existing building is built on Load bearing structure, Makemyhouse shall not responsible for Providing any further Structure drawing on the same.</li>\r\n<li>Number of columns and beam grids shall only be decided or approved by our structural engineer as per technical feasibility.</li>\r\n<li>In case of any changes on site is done without prior information or approval by Makemyhouse Technical Team. Makemyhouse shall not be responsible for any damage or loss incurred by the client.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/4",
+        "addons": [
+            {
+                "id": 44,
+                "name": "BBS drawings",
+                "description": "With the help of bar bending schedule the requirement of different length and sizes of bars may be known and can be arranged and bent-up during the time of construction",
+                "is_tax_inclusive": "1",
+                "category": {
+                    "ID": 2,
+                    "parentID": 1,
+                    "name": "Residential"
+                },
+                "type": "ADDN",
+                "addons": [],
+                "inclusions": [],
+                "pricing": {
+                    "price": 9500,
+                    "extra_option": -1,
+                    "immediate_delivery": -1,
+                    "currency": "INR"
+                },
+                "taxes": [
+                    {
+                        "name": "IGST 18%",
+                        "isPercentage": true,
+                        "value": 18
+                    }
+                ],
+                "features": []
+            }
+        ],
+        "inclusions": [],
+        "pricing": {
+            "price": 6500,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Centre Line plan",
+            "Column details and its reinforcement",
+            "Foundation detail and Footing plan (as per site condition if soil report is received)",
+            "Plinth Beam Details",
+            "Lintel Details as per intermediate space",
+            "Slab Design and its reinforcement detail",
+            "Beam Design and its reinforcement details as per drawings",
+            "Staircase Design and its sections if required"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Plumbing/Drainage",
+        "description": "Waster water and drain water supply of Building with water tank and septic tank capacity as per need",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Pre initiation of drawing, client has to prior inform regarding Septic tank availability in their society or colony. ( in req sheet)</li>\r\n<li>Pre initiation of drawing, client has to inform regarding capacity of water tank.( in req sheet).</li>\r\n<li>Pre initiation of drawing, client has to inform, If he needs provision of hot water and cold water. ( in req sheet).</li>\r\n<li>No AC( Air condition) , solar paneling, Home automation, Security solutions designs will be provided under given package.</li>\r\n<li>Electrical Looping details are not included in the given package.</li>\r\n<li>Without column and beam details, Electrical and plumbing drawings shall not be initiated.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/5",
+        "addons": [],
+        "inclusions": [],
+        "pricing": {
+            "price": 5200,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Under Ground Water tank details",
+            "OHWT details",
+            "Drainage: Includes placement of chambers, waste pipes etc from toilets till outlet and Septic Tank Details (if required)",
+            "Plumbing: Includes all pipe line layout from Tank to all faucets & taps",
+            "Rain Water and Drain Water Management if required",
+            "Electrical: Includes electrical layout of each and every room with switch board, light, fan etc positions."
+        ]
+    },
+    {
+        "id": 6,
+        "name": "BOQ for loan approval",
+        "description": "Rough Bill of quantity is provided for LOAN PURPOSE ONLY, carries approx rates of materials (Excludes detail bifurcation of same material like steel diameter )",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>This BOQ is as for BANK LOAN purpose only and quantities are adjusted as per loan requirements.</li>\r\n<li>No material quantities will be provided for material purchase.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/6",
+        "addons": [],
+        "inclusions": [],
+        "pricing": {
+            "price": 3600,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Total Construction Cost as per given designs• Complete Material detail along with Quantity",
+            "Detailed Labor Cost including civil and other jobs"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Material Quantity",
+        "description": "Material Quantity includes basic calculation civil materials used in building ,make purchasing easy to individual customer (Excludes detail bifurcation of same material like steel diameter )",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>Material quantities are on approximate calculations and may vary as per local geographic and market conditions</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/17",
+        "addons": [],
+        "inclusions": [],
+        "pricing": {
+            "price": 7100,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Quantity for purchasing the materials"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "BOQ as per SOR/PWD",
+        "description": "Detailed Bill of quantities are provided as per region and location of client (Excludes detail bifurcation of same material like steel diameter ) ",
+        "is_tax_inclusive": "1",
+        "category": {
+            "ID": 2,
+            "parentID": 1,
+            "name": "Residential"
+        },
+        "type": "STND",
+        "servicePolicy": "<ol type=\"1\">\r\n<li>BOQ shall be designed as per PWD SOR (Schedule of Rates).</li>\r\n<li>Rates mentioned in BOQ may vary in actual.\r\na. as per material availability and site conditions.\r\nb. as per geographical region.\r\nc. As per Soil condition.</li>\r\n</ol>",
+        "servicePolicyUrl": "http://testing.makemyhouse.com/policies/18",
+        "addons": [],
+        "inclusions": [],
+        "pricing": {
+            "price": 5900,
+            "extra_option": -1,
+            "immediate_delivery": -1,
+            "currency": "INR"
+        },
+        "taxes": [
+            {
+                "name": "IGST 18%",
+                "isPercentage": true,
+                "value": 18
+            }
+        ],
+        "features": [
+            "Total cost along with material details and labor details as per Schedule of rates of Particular State"
+        ]
+    }
+]
