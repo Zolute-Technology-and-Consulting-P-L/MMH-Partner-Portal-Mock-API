@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 var fs = require("fs");
+
 var cors = require('cors');
 app.use(cors());
+app.use(express.json());
+
 
 app.get('/partner/customer', function (req, res) {
    fs.readFile( __dirname + "/" + "json/customers.json", 'utf8', function (err, data) {
@@ -112,17 +115,38 @@ app.post('/partner/customer/verifyotp', function (req, res) {
       res.send( data );
    });
 })
-app.post('/partner/me/loginotp', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/loginotp.json", 'utf8', function (err, data) {
+app.post('/partner/me/loginotp', function (req, res, next) {
+   if(req.body.isd=='91' && req.body.mobile=='9993336666'){
+      fs.readFile( __dirname + "/" + "json/loginotp.json", 'utf8', function (err, data) {
      
-      res.send( data );
-   });
+         res.send( data );
+      });
+   }else{
+      fs.readFile( __dirname + "/" + "json/errorloginotp.json", 'utf8', function (err, data) {
+         res.statusCode = 403;
+         res.send( data );
+      });
+   }
+  
 })
 app.post('partner/customer/link', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/linkcustomer.json", 'utf8', function (err, data) {
+   if(req.body.isd=='91' && req.body.mobile=='9993336666'){
+      fs.readFile( __dirname + "/" + "json/linkcustomer.json", 'utf8', function (err, data) {
      
-      res.send( data );
-   });
+         res.send( data );
+      });
+   }else if(req.body.isd=='91' && req.body.mobile=='9993337777'){
+      fs.readFile( __dirname + "/" + "json/errorlinkcustomer.json", 'utf8', function (err, data) {
+         res.statusCode = 403;
+         res.send( data );
+      });
+   }else{
+      fs.readFile( __dirname + "/" + "json/errorlinkcustomer2.json", 'utf8', function (err, data) {
+         res.statusCode = 403;
+         res.send( data );
+      });
+   }
+ 
 })
 app.get('public/productsv2/:id', function (req, res) {
    fs.readFile( __dirname + "/" + "json/productsv2.json", 'utf8', function (err, data) {
