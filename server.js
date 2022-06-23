@@ -61,15 +61,15 @@ app.post('/partner/me/loginotp', function (req, res, next) {
   
  })
 
- app.post('/partner/customer/link', auth.authenticateToken, function (req, res) {
+//  app.post('/partner/customer/link', auth.authenticateToken, function (req, res) {
    
 
-   if(req.body.isd=='91' && req.body.mobile != ''){
+//    if(req.body.isd=='91' && req.body.mobile != ''){
 
-      res.json({'msg':'created'})
-   }
+//       res.json({'msg':'created'})
+//    }
  
-})
+// })
 
 
 app.get('/partner/customer/', function (req, res) {
@@ -184,18 +184,18 @@ app.post('/partner/customer', function (req, res) {
       res.send( data );
    });
 })
-// app.post('/partner/me/veryfyotp', function (req, res) {
-//    fs.readFile( __dirname + "/" + "json/partnerdetails.json", 'utf8', function (err, data) {
-     
-//       res.send( data );
-//    });
-// })
-app.post('/partner/customer/verifyotp', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/linkcustomerdetails.json", 'utf8', function (err, data) {
+app.post('/partner/me/veryfyotp', function (req, res) {
+   fs.readFile( __dirname + "/" + "json/partnerdetails.json", 'utf8', function (err, data) {
      
       res.send( data );
    });
 })
+// app.post('/partner/customer/verifyotp', function (req, res) {
+//    fs.readFile( __dirname + "/" + "json/linkcustomerdetails.json", 'utf8', function (err, data) {
+     
+//       res.send( data );
+//    });
+// })
 // app.post('/partner/me/loginotp', function (req, res, next) {
 //    if(req.body.isd=='91' && req.body.mobile=='9993336666'){
 //       fs.readFile( __dirname + "/" + "json/loginotp.json", 'utf8', function (err, data) {
