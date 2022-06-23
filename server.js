@@ -61,15 +61,15 @@ app.post('/partner/me/loginotp', function (req, res, next) {
   
  })
 
-//  app.post('/partner/customer/link', auth.authenticateToken, function (req, res) {
+ app.post('/partner/customer/link', auth.authenticateToken, function (req, res) {
    
 
-//    if(req.body.isd=='91' && req.body.mobile != ''){
+   if(req.body.isd=='91' && req.body.mobile != ''){
 
-//       res.json({'msg':'created'})
-//    }
+     
+   }
  
-// })
+})
 
 
 app.get('/partner/customer/', function (req, res) {

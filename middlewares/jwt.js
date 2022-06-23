@@ -8,19 +8,20 @@ dotenv.config();
 // get password vars from .env file
 
 
-function authenticateToken(req, res, next) {
+function  authenticateToken  (req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
- 
+    console.log(token);
 
     if (token == null) return res.sendStatus(401)
-    let user = PartnersModel.findOne({mobile:token}).exec();
+    PartnersModel.findOne({mobile:token}).then((user)=>{
         if(!user){
-             res.status(403).json({"message":"Invalid token"})
-        }
-   
-        req.user = user
+            res.status(403).json({"message":"Invalid token"})
+       }
+       req.user = user
         next()
+    });
+        
    
 }
 
