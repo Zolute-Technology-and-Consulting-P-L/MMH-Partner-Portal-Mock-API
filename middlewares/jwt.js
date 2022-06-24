@@ -9,7 +9,7 @@ dotenv.config();
 
 
 function  authenticateToken  (req, res, next) {
-    const token = req.headers['authorization'];
+    const token = req.headers['x-api-key'];
  
     console.log(token);
 
