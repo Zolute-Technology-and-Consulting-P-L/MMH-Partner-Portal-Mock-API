@@ -28,7 +28,7 @@ async function customerInfo(mobile){
 }
 
 const verifyotp = async ({mobile,otp}) => {
-    return await CustomerModel.findOne({contact,mobile,otp:otp});
+    return await CustomerModel.findOne({contact:mobile,otp:otp});
 }
 
 const create = async (body) => {
