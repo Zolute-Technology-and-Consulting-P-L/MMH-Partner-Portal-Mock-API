@@ -164,10 +164,16 @@ app.post('/partner/orderv2', function (req, res) {
    })
 })
 app.post('/partner/orderv2/products/:orderID', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/addProducts.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+   let body = req.body;
+   DraftOrder.findById(req.param.orderID,function(err,order){
+      order.modifiedTime = body.modifiedTime;
+      order.plot =body.plot;
+      order.pricing = body.pricing
+      order.products.push = body.products
+      order.save((orderDetail)=>{
+         res.json(orderDetail);
+      })
+   })
 })
 app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
    fs.readFile( __dirname + "/" + "json/applyCouponCode.json", 'utf8', function (err, data) {

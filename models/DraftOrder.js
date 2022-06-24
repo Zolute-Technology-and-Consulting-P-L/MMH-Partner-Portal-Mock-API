@@ -68,6 +68,10 @@ const draftOrderSchema = new mongoose.Schema({
     gstNo: {
         type:String,
         default:null
+    },
+    currency:{
+        type:String,
+        default:"INR"
     }
 })
 
