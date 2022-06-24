@@ -188,10 +188,11 @@ app.post('/partner/orderv2/activationAmount/:orderID', function (req, res) {
    });
 })
 app.get('/partner/orderv2/', auth.authenticateToken, function (req, res) {
-   let response = [];
+   let  data = [];
+   var orderCount = 0;
    DraftOrder.find({createdBy:req.user._id}).then((orders)=>{
       orders.forEach(elem => {
-            response.push({
+            data.push({
                "orderID": elem._id,
             "orderCode": elem.orderCode,
             "orderedAt": elem.creationTime,
@@ -243,8 +244,12 @@ app.get('/partner/orderv2/', auth.authenticateToken, function (req, res) {
             ]
 
             })
+            orderCount++;
        });
-
+       let response = {
+         "totalRecords":orderCount,
+         "orders": data
+       }
        res.json(response);
    })
  
