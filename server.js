@@ -125,7 +125,16 @@ app.post('/partner/me/loginotp', function (req, res, next) {
 
 app.get('/partner/customer/', auth.authenticateToken, function (req, res) {
       CustomerLink.find({partnerMobile:req.user.mobile}).then((users)=>{
-         res.json(users);
+         res.json({
+            userDetails:{
+               "userID": 6982,
+               "firstname": "kian",
+               "lastname": "choudhary",
+               "email": null,
+               "contact": "9993641702"
+            }
+
+         })
       });
 })
 // app.get('/partner/customer/:id', function (req, res) {
