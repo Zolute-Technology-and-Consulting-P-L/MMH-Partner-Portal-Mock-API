@@ -13,6 +13,7 @@ var fs = require("fs");
 var cors = require('cors');
 const CustomerLink = require('./models/CustomerLink');
 const DraftOrder = require('./models/DraftOrder');
+const Commission = require('./models/Commission');
 app.use(cors());
 
 
@@ -277,11 +278,16 @@ app.get('/public/productsv2/:orderid', function (req, res) {
    });
 })
 
-app.get('/partner/Commission', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/Commission.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+app.get('/partner/Commission',auth.authenticateToken, function (req, res) {
+   let response = {
+      "totalRecords": 1,
+      "limit": 10,
+      "page": 1,
+   }
+   Commission.find({}).then((list)=>{
+      response.commissions = list;
+      res.json(response);
+   })
 })
 app.get('/partner/Commission/wallet/', function (req, res) {
    fs.readFile( __dirname + "/" + "json/wallet.json", 'utf8', function (err, data) {
