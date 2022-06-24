@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const draftOrderSchema = new mongoose({
+const draftOrderSchema = new mongoose.Schema({
     orderCode:{
         type:String
     },

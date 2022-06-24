@@ -4,6 +4,9 @@ const customerLinkSchema = new mongoose.Schema({
     partnerMobile:{
         type: Number
     },
+    userId:{
+        type : String
+    },
     contact:{
         type:Number
     },

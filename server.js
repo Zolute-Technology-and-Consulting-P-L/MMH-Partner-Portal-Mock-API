@@ -6,11 +6,13 @@ const mongoose = require('mongoose');
 const CustomerController = require("./controllers/CustomerController");
 const PartnerController = require("./controllers/PartnerController");
 const customerLink = require("./models/CustomerLink");
+const defatOrder = require("./models/DraftOrder");
 const auth = require("./middlewares/jwt");
 var fs = require("fs");
 
 var cors = require('cors');
 const CustomerLink = require('./models/CustomerLink');
+const DraftOrder = require('./models/DraftOrder');
 app.use(cors());
 
 
@@ -141,10 +143,13 @@ app.get('/partner/customer/', auth.authenticateToken, function (req, res) {
 //    }
 // })
 app.post('/partner/orderv2', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/draftOrderCreate.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+   let draftOrder = new DraftOrder(req.body);
+   draftOrder.save().then((order)=>{
+      res.json(order)
+   }).catch((e)=>{
+      console.log(e);
+      res.status(500).json(e);
+   })
 })
 app.post('/partner/orderv2/products/:orderID', function (req, res) {
    fs.readFile( __dirname + "/" + "json/addProducts.json", 'utf8', function (err, data) {
@@ -182,11 +187,67 @@ app.post('/partner/orderv2/activationAmount/:orderID', function (req, res) {
       res.send( data );
    });
 })
-app.get('/partner/orderv2/', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/orderlist.json", 'utf8', function (err, data) {
-     
-      res.send( data ); 
-   });
+app.get('/partner/orderv2/', auth.authenticateToken, function (req, res) {
+   let response = [];
+   DraftOrder.find({createdBy:req.user._id}).then((orders)=>{
+      orders.forEach(elem => {
+            response.push({
+               "orderID": elem._id,
+            "orderCode": elem.orderCode,
+            "orderedAt": elem.creationTime,
+            "projectName": "",
+            "orderPaymentMode": null,
+            "orderType": "",
+            "noOfFloors": 3,
+            "orderAmount": elem.pricing.netAmount,
+            "orderGstAmount": 0,
+            "orderTotalAmount": elem.pricing.grossAmount,
+            "ispaid": 0,
+            "customer": elem.customer,
+            "orderStatus": "Pending Client Approval",
+            "version": "v2",
+            "payments": [],
+            "services": [
+                {
+                    "id": 1,
+                    "servicename": "2D Elevation",
+                    "priority": 1,
+                    "price": 3050.84,
+                    "gst": 549.16,
+                    "instant_delivery": 500,
+                    "additional_option": 500,
+                    "total_amount": 4600,
+                    "discount": 0,
+                    "activation_amount": 4400,
+                    "isActive": false
+                },
+                {
+                    "id": 2,
+                    "servicename": "3D Elevation",
+                    "priority": 2,
+                    "price": 12203.38,
+                    "gst": 2196.62,
+                    "instant_delivery": 500,
+                    "additional_option": 500,
+                    "total_amount": 15400,
+                    "discount": 0,
+                    "activation_amount": 0,
+                    "isActive": false
+                }
+            ],
+            "installments": [
+                {
+                    "id": 1,
+                    "amount": 4400
+                }
+            ]
+
+            })
+       });
+
+       res.json(response);
+   })
+ 
 })
 
 app.get('/partner/orderv2/:orderCode', function (req, res) {
@@ -226,12 +287,12 @@ app.get('/partner/Commission/withdrawalRequest/', function (req, res) {
       res.send( data );
    });
 })
-app.post('/partner/customer', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/customerdetails.json", 'utf8', function (err, data) {
+// app.post('/partner/customer', function (req, res) {
+//    fs.readFile( __dirname + "/" + "json/customerdetails.json", 'utf8', function (err, data) {
      
-      res.send( data );
-   });
-})
+//       res.send( data );
+//    });
+// })
 
 app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, res) {
    const {mobile,otp} = req.body;
@@ -239,9 +300,11 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
       if(customer){
          let link = new customerLink({
             partnerMobile:req.user.mobile,
+            userId:customer._id,
             mobile:customer.mobile,
             email:customer.email,
-            name:customer.name
+            firstname:customer.firstname,
+            lastname:customer.lastname
          });
         link.save().then((user)=>{
          res.json({'msg':'customer linked successfully!','data':user});
