@@ -14,6 +14,7 @@ var cors = require('cors');
 const CustomerLink = require('./models/CustomerLink');
 const DraftOrder = require('./models/DraftOrder');
 const Commission = require('./models/Commission');
+const Withdrawal = require('./models/Withdrawal');
 app.use(cors());
 
 
@@ -296,16 +297,23 @@ app.get('/partner/Commission/wallet/', function (req, res) {
    });
 })
 app.post('/partner/Commission/withdrawal/', function (req, res) {
+  
    fs.readFile( __dirname + "/" + "json/addwithdrawal.json", 'utf8', function (err, data) {
      
       res.send( data );
    });
 })
 app.get('/partner/Commission/withdrawalRequest/', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/withdrawalRequest.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+   let response = {
+      "totalRecords": 1,
+      "limit": 10,
+      "page": 1,
+   }
+   Withdrawal.find({}).then((list)=>{
+      response.withdrawalRequest = list;
+
+      res.json(response);
+   })
 })
 // app.post('/partner/customer', function (req, res) {
 //    fs.readFile( __dirname + "/" + "json/customerdetails.json", 'utf8', function (err, data) {
