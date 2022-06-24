@@ -127,15 +127,9 @@ app.post('/partner/me/loginotp', function (req, res, next) {
 
 
 app.get('/partner/customer/', auth.authenticateToken, function (req, res) {
-      CustomerLink.findOne({partnerMobile:req.user.mobile}).then((user)=>{
+      CustomerLink.find({partnerMobile:req.user.mobile}).then((user)=>{
          res.json({
-            userDetails:{
-               "userID": user.userId,
-               "firstname": user.firstname,
-               "lastname": user.lastname,
-               "email": null,
-               "contact": user.email
-            }
+            userDetails:user
 
          })
       });
