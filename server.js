@@ -15,6 +15,7 @@ const CustomerLink = require('./models/CustomerLink');
 const DraftOrder = require('./models/DraftOrder');
 const Commission = require('./models/Commission');
 const Withdrawal = require('./models/Withdrawal');
+const IncommingLead = require('./models/IncommingLead');
 app.use(cors());
 
 
@@ -139,20 +140,17 @@ app.get('/partner/customer/', auth.authenticateToken, function (req, res) {
          })
       });
 })
-// app.get('/partner/customer/:id', function (req, res) {
-//    if(req.params.id=="leads"){
-//       fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
-     
-//          res.send( data );
-//       });
-//    }else{
-    
-//    fs.readFile( __dirname + "/" + "json/customer.json", 'utf8', function (err, data) {
-     
-//       res.send( data );
-//    });
-//    }
-// })
+app.get('/partner/customer/leads',auth.authenticateToken, function (req, res) {
+   let response = {
+      "totalRecords": 6,
+    "limit": 10,
+    "page": 1,
+   }
+   IncommingLead.find({}).then((leads)=>{
+      response.leads = leads;
+      res.json(response);
+   })
+})
 app.post('/partner/orderv2', function (req, res) {
    let draftOrder = new DraftOrder(req.body);
    draftOrder.save().then((order)=>{
