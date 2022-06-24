@@ -22,6 +22,10 @@ const customerLinkSchema = new mongoose.Schema({
     linkStatus:{
         type:String,
         default:"direct"
+    },
+    isdCode:{
+        type:String,
+        default:"91"
     }
 })
 

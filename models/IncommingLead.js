@@ -24,6 +24,9 @@ const leadSchema = new mongoose.Schema({
     },
     manager:{
         type:Object
+    },
+    otp:{
+        type:String
     }
 })
 

@@ -109,15 +109,24 @@ app.post('/partner/me/loginotp', function (req, res, next) {
 
    if(req.body.isd=='91' && req.body.mobile != ''){
       CustomerController.customerInfo(req.body.mobile).then((user)=>{
-         console.log(user);
          if(user){
             res.json({
                "msg": "otp sent successfully",
                });
          }else{
-            res.status(403).json({
-               "msg": "this mobile number is not belongs to customer",
-               });
+            IncommingLead.findOne({contact:req.body.mobile}).then((user)=>{
+               if(user){
+                  res.json({
+                     "msg": "otp sent successfully",
+                     });
+               }else{
+                  res.status(403).json({
+                     "msg": "this mobile number is not belongs to customer",
+                     });
+               }
+               
+            })
+           
          }
       });
      
@@ -318,10 +327,16 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
    const {mobile,otp} = req.body;
    CustomerController.verifyotp({mobile,otp}).then((customer)=>{
       if(customer){
+         if(customer.linkable == 'linked'){
+            res.status(403).json({"msg": "User already exist in system. Contact your manager for details"})
+         }else if(customer.linkable == 'unavailable'){
+            res.status(403).json({ "msg": "Lead status not valid so you hove not permission to create lead"});
+         }
+         
          let link = new customerLink({
             partnerMobile:req.user.mobile,
             userId:customer._id,
-            mobile:customer.mobile,
+            contact:customer.contact,
             email:customer.email,
             firstname:customer.firstname,
             lastname:customer.lastname
@@ -333,7 +348,25 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
         });
          
       }else{
-         res.status(403).json({'msg':'Invalid otp or mobile'});
+         console.log(req.body.mobile,req.body.otp)
+          IncommingLead.findOne({contact:req.body.mobile,otp:req.body.otp}).then((incUser)=>{
+            if(incUser){
+               let link = new customerLink({
+                  partnerMobile:req.user.mobile,
+                  userId:incUser._id,
+                  contact:incUser.contact,
+                  email:incUser.email,
+                  firstname:incUser.firstname,
+                  lastname:incUser.lastname
+               });
+              link.save().then((user)=>{
+               res.json({'msg':'customer linked successfully!','data':user});
+              })
+            }else{
+               res.status(403).json({'msg':'Invalid otp or mobile'});
+            }
+          })  
+         
       }
    }).catch((e)=>{
       console.log(e);
