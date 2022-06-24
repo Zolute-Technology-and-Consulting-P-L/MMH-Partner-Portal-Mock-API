@@ -27,6 +27,10 @@ async function customerInfo(mobile){
     return await CustomerModel.findOne({mobile:mobile});
 }
 
+const verifyotp = async ({mobile,otp}) => {
+    return await CustomerModel.findOne({mobile,mobile,otp:otp});
+}
+
 const create = async (body) => {
    
     let user = new CustomerModel(body);
@@ -34,4 +38,4 @@ const create = async (body) => {
      
 }
 
-module.exports = {customerList,create};
+module.exports = {customerList,create,verifyotp};

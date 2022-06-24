@@ -8,13 +8,13 @@ const customertSchema = new mongoose.Schema({
         type: String
     },
     mobile:{
-        type:String
+        type:Number
     },
     isd:{
-        type:String,
+        type:Number,
     },
     otp:{
-        type:String
+        type:Number
     }
 })
 

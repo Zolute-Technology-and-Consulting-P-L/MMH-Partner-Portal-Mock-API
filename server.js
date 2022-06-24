@@ -5,10 +5,12 @@ const mongoose = require('mongoose');
 
 const CustomerController = require("./controllers/CustomerController");
 const PartnerController = require("./controllers/PartnerController");
+const customerLink = require("./models/CustomerLink");
 const auth = require("./middlewares/jwt");
 var fs = require("fs");
 
 var cors = require('cors');
+const CustomerLink = require('./models/CustomerLink');
 app.use(cors());
 
 
@@ -33,7 +35,7 @@ app.use(express.json());
 
 
 
-app.get('/partner/customer/',CustomerController.customerList);
+// app.get('/partner/customer/',CustomerController.customerList);
 
 app.post('/partner/customer', function (req, res) {
    
@@ -62,36 +64,38 @@ app.post('/partner/me/loginotp', function (req, res, next) {
  })
 
  app.post('/partner/customer/link', auth.authenticateToken, function (req, res) {
-   
 
    if(req.body.isd=='91' && req.body.mobile != ''){
 
-     
+     res.json({
+      "msg": "otp sent successfully",
+  });
    }
  
 })
 
 
-app.get('/partner/customer/', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/customers.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
-})
-app.get('/partner/customer/:id', function (req, res) {
-   if(req.params.id=="leads"){
-      fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
-     
-         res.send( data );
+app.get('/partner/customer/', auth.authenticateToken, function (req, res) {
+      CustomerLink.find({partnerMobile:req.user.mobile}).then((users)=>{
+         res.json(users);
       });
-   }else{
-    
-   fs.readFile( __dirname + "/" + "json/customer.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
-   }
+      
+      
 })
+// app.get('/partner/customer/:id', function (req, res) {
+//    if(req.params.id=="leads"){
+//       fs.readFile( __dirname + "/" + "json/incominglead.json", 'utf8', function (err, data) {
+     
+//          res.send( data );
+//       });
+//    }else{
+    
+//    fs.readFile( __dirname + "/" + "json/customer.json", 'utf8', function (err, data) {
+     
+//       res.send( data );
+//    });
+//    }
+// })
 app.post('/partner/orderv2', function (req, res) {
    fs.readFile( __dirname + "/" + "json/draftOrderCreate.json", 'utf8', function (err, data) {
      
@@ -184,18 +188,30 @@ app.post('/partner/customer', function (req, res) {
       res.send( data );
    });
 })
-app.post('/partner/me/veryfyotp', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/partnerdetails.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+
+app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, res) {
+   const {mobile,otp} = req.body;
+   CustomerController.verifyotp({mobile,otp}).then((customer)=>{
+      if(customer){
+         let link = new customerLink({
+            partnerMobile:req.user.mobile,
+            mobile:customer.mobile,
+            email:customer.email,
+            name:customer.name
+         });
+        link.save().then((user)=>{
+         res.json({'msg':'customer linked successfully!','data':user});
+        });
+         
+      }else{
+         res.status(403).json({'msg':'Invalid otp or mobile'});
+      }
+   }).catch((e)=>{
+      console.log(e);
+   })
+  
+   
 })
-// app.post('/partner/customer/verifyotp', function (req, res) {
-//    fs.readFile( __dirname + "/" + "json/linkcustomerdetails.json", 'utf8', function (err, data) {
-     
-//       res.send( data );
-//    });
-// })
 // app.post('/partner/me/loginotp', function (req, res, next) {
 //    if(req.body.isd=='91' && req.body.mobile=='9993336666'){
 //       fs.readFile( __dirname + "/" + "json/loginotp.json", 'utf8', function (err, data) {
@@ -210,25 +226,7 @@ app.post('/partner/me/veryfyotp', function (req, res) {
 //    }
   
 // })
-app.post('/partner/customer/link', function (req, res) {
-   if(req.body.isd=='91' && req.body.mobile=='9993336666'){
-      fs.readFile( __dirname + "/" + "json/linkcustomer.json", 'utf8', function (err, data) {
-     
-         res.send( data );
-      });
-   }else if(req.body.isd=='91' && req.body.mobile=='9993337777'){
-      fs.readFile( __dirname + "/" + "json/errorlinkcustomer.json", 'utf8', function (err, data) {
-         res.statusCode = 403;
-         res.send( data );
-      });
-   }else{
-      fs.readFile( __dirname + "/" + "json/errorlinkcustomer2.json", 'utf8', function (err, data) {
-         res.statusCode = 403;
-         res.send( data );
-      });
-   }
- 
-})
+
 
 
 
