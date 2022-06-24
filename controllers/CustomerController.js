@@ -24,11 +24,11 @@ async function login({ email, password }) {
 }
 
 async function customerInfo(mobile){
-    return await CustomerModel.findOne({mobile:mobile});
+    return await CustomerModel.findOne({contact:mobile}).exec();
 }
 
 const verifyotp = async ({mobile,otp}) => {
-    return await CustomerModel.findOne({mobile,mobile,otp:otp});
+    return await CustomerModel.findOne({contact,mobile,otp:otp});
 }
 
 const create = async (body) => {
@@ -38,4 +38,4 @@ const create = async (body) => {
      
 }
 
-module.exports = {customerList,create,verifyotp};
+module.exports = {customerList,create,verifyotp,customerInfo};

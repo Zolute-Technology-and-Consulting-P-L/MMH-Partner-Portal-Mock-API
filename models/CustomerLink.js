@@ -4,10 +4,13 @@ const customerLinkSchema = new mongoose.Schema({
     partnerMobile:{
         type: Number
     },
-    mobile:{
+    contact:{
         type:Number
     },
-    name:{
+    firstname:{
+        type:String
+    },
+    lastname:{
         type:String
     },
     email:{

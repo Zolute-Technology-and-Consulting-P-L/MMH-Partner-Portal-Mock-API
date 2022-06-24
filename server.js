@@ -50,7 +50,38 @@ app.post('/partner/me/veryfyotp', function (req, res,next) {
    const {mobile,otp} = req.body;
    PartnerController.verifyOtp({mobile,otp}).then((user)=>{
       console.log(user)
-      user ? res.json(user) : res.status(401).json({"msg":"invalid mobile or otp"});
+      let reseponse = {}
+ 
+      if(user){
+         response = {
+            "userDetails": {
+                "userID": user._id,
+                "firstname": user.firstname,
+                "lastname": user.lastname,
+                "email": user.email,
+                "contact": user.mobile,
+                "userCategoryID": 6,
+                "currency":"INR"
+                
+            },
+            "partnerDetails":{
+            "commission":{
+            "direct":20,
+            "indirect":10
+            },
+            "maturity":10,
+            "withdrawal":{
+            "min":1200,
+            "max":2000
+            }
+            },
+            "token": user.mobile
+        }
+        res.json(response)
+      }else{
+         res.status(401).json({"msg":"invalid mobile or otp"});
+      }
+     
      
    }).catch((e)=>{
       res.json(e);
@@ -58,18 +89,33 @@ app.post('/partner/me/veryfyotp', function (req, res,next) {
 })
 
 app.post('/partner/me/loginotp', function (req, res, next) {
+   if(req.body.mobile == 9876543210 && req.body.isd == 91){
+      res.json({"msg": "otp has been sent successfully!"});
+   }else if(req.body.mobile == 9630308464 && req.body.isd == 91){
+      res.json({"msg": "otp has been sent successfully!"});
+   }else{
+      res.json({"msg": "This mobile number is not belongs to partner"});
+   }
    
-   res.json({"msg": "otp has been sent successfully!"});
   
  })
 
  app.post('/partner/customer/link', auth.authenticateToken, function (req, res) {
 
    if(req.body.isd=='91' && req.body.mobile != ''){
-
-     res.json({
-      "msg": "otp sent successfully",
-  });
+      CustomerController.customerInfo(req.body.mobile).then((user)=>{
+         console.log(user);
+         if(user){
+            res.json({
+               "msg": "otp sent successfully",
+               });
+         }else{
+            res.status(403).json({
+               "msg": "this mobile number is not belongs to customer",
+               });
+         }
+      });
+     
    }
  
 })
@@ -79,8 +125,6 @@ app.get('/partner/customer/', auth.authenticateToken, function (req, res) {
       CustomerLink.find({partnerMobile:req.user.mobile}).then((users)=>{
          res.json(users);
       });
-      
-      
 })
 // app.get('/partner/customer/:id', function (req, res) {
 //    if(req.params.id=="leads"){
