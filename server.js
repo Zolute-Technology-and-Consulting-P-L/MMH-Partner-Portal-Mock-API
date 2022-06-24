@@ -313,6 +313,8 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
          });
         link.save().then((user)=>{
          res.json({'msg':'customer linked successfully!','data':user});
+        }).catch((err)=>{
+            res.status(500).json(err);
         });
          
       }else{
