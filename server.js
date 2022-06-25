@@ -157,6 +157,11 @@ app.get('/partner/customer/leads',auth.authenticateToken, function (req, res) {
 app.post('/partner/orderv2', function (req, res) {
    let draftOrder = new DraftOrder();
    draftOrder.plot = req.body;
+   draftOrder.customer = {
+      firstName:"kian",
+      lastname:"choudhary",
+      phoneNumber:"9876543212"
+   }
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
