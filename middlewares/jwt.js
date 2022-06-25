@@ -10,7 +10,7 @@ dotenv.config();
 
 function  authenticateToken  (req, res, next) {
  
-    console.log(token);
+    let token = req.headers['x-api-key'];
 
     if (token == null) return res.sendStatus(401)
     PartnersModel.findOne({mobile:token}).then((user)=>{
