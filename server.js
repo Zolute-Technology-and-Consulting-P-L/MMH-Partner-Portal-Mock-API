@@ -166,19 +166,16 @@ app.post('/partner/orderv2', function (req, res) {
 })
 app.post('/partner/orderv2/products/:orderID', function (req, res) {
    let body = req.body;
-   let products = req.body.products;
-   DraftOrder.findById(req.param.orderID,function(err,order){
-
-      forEach.products(elem=>{
-         order.products.push = elem
-      })
-
-      order.save((orderDetail)=>{
-         res.json(orderDetail);
-      }).catch((err)=>{
-         res.status(500).json(err);
-      })
-   })
+   let productsArr = req.body.products;
+   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}}}, {upsert:true}, function(err,result){
+      if(err){
+              console.log(err);
+      }else{
+         DraftOrder.findById(req.params.orderID,function(err,order){
+                  res.json(order);
+              })
+      }
+   });
 })
 app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
    fs.readFile( __dirname + "/" + "json/applyCouponCode.json", 'utf8', function (err, data) {
