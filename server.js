@@ -155,7 +155,8 @@ app.get('/partner/customer/leads',auth.authenticateToken, function (req, res) {
    })
 })
 app.post('/partner/orderv2', function (req, res) {
-   let draftOrder = new DraftOrder(req.body);
+   let draftOrder = new DraftOrder();
+   draftOrder.plot = req.body;
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
@@ -171,7 +172,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
       forEach.products(elem=>{
          order.products.push = elem
       })
-      
+
       order.save((orderDetail)=>{
          res.json(orderDetail);
       })
