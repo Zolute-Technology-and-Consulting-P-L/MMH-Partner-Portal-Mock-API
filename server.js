@@ -175,6 +175,8 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
 
       order.save((orderDetail)=>{
          res.json(orderDetail);
+      }).catch((err)=>{
+         res.status(500).json(err);
       })
    })
 })
