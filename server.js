@@ -159,8 +159,9 @@ app.post('/partner/orderv2', function (req, res) {
    draftOrder.plot = req.body;
    draftOrder.customer = {
       firstName:"kian",
-      lastname:"choudhary",
-      phoneNumber:"9876543212"
+      lastName:"choudhary",
+      phoneNumber:"9876543212",
+      isdCode: "91"
    }
    draftOrder.save().then((order)=>{
       res.json(order)
