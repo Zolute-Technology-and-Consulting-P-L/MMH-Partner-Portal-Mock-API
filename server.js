@@ -165,11 +165,13 @@ app.post('/partner/orderv2', function (req, res) {
 })
 app.post('/partner/orderv2/products/:orderID', function (req, res) {
    let body = req.body;
+   let products = req.body.products;
    DraftOrder.findById(req.param.orderID,function(err,order){
-      order.modifiedTime = body.modifiedTime;
-      order.plot =body.plot;
-      order.pricing = body.pricing
-      order.products.push = body.products
+
+      forEach.products(elem=>{
+         order.products.push = elem
+      })
+      
       order.save((orderDetail)=>{
          res.json(orderDetail);
       })
