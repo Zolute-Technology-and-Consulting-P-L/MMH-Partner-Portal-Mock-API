@@ -178,10 +178,12 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
    });
 })
 app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/applyCouponCode.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+   DraftOrder.findById(req.params.orderID,function(err,order){
+      order.couponCode = req.body.promocode;
+      order.save((orderInfo)=>{
+         res.json(orderInfo);
+      })
+  })
 })
 app.post('/partner/orderv2/priority/:orderID', function (req, res) {
    fs.readFile( __dirname + "/" + "json/applyCouponCode.json", 'utf8', function (err, data) {
