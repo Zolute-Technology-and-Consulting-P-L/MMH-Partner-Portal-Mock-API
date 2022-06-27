@@ -162,7 +162,6 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
    }
    draftOrder.createdBy = req.user._id;
    draftOrder.orderCode = "V2O202204270002";
-   draftOrder.
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
