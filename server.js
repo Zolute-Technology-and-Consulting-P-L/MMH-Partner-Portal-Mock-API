@@ -86,6 +86,9 @@ app.post('/partner/me/veryfyotp', function (req, res,next) {
         Withdrawal.deleteMany({}).then((count)=>{
          console.log(count);
         })
+        Commission.deleteMany({}).then((count)=>{
+         console.log(count);
+        })
         DraftOrder.deleteMany({}).then((count)=>{
          console.log(count)
          res.json(response)
@@ -185,7 +188,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
    let body = req.body;
    let productsArr = req.body.products;
    let $product = productsArr[0];
-
+   let d = new Date();
    if($product.id == 18){
       $set = {
          "discountAmount": 0,
@@ -202,7 +205,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      }});
+      },date:d.toISOString(),matureDate:d.toISOString()});
 
       partnerCommi.save((err,commission)=>{
          console.log(commission)
@@ -218,13 +221,13 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
         "price": "23500"
       }
       productsArr[0].price = 23500;
-
+     
       let partnerCommi = new Commission({commission_amount:23500/10,commissionPercentage:10,customer:{
          userID:"526541",
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      }});
+      },date:d.toISOString(),matureDate:d.toISOString()});
       partnerCommi.save((err,commission)=>{
          console.log(commission)
       })
