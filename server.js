@@ -154,7 +154,7 @@ app.get('/partner/customer/leads',auth.authenticateToken, function (req, res) {
       res.json(response);
    })
 })
-app.post('/partner/orderv2', function (req, res) {
+app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
    let draftOrder = new DraftOrder();
    draftOrder.plot = req.body;
    draftOrder.customer = {
@@ -163,6 +163,7 @@ app.post('/partner/orderv2', function (req, res) {
       phoneNumber:"9876543212",
       isdCode: "91"
    }
+   draftOrder.createdBy = req.user._id;
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
