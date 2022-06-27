@@ -161,6 +161,7 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
       isdCode: "91"
    }
    draftOrder.createdBy = req.user._id;
+   draftOrder.orderCode = "V2O202204270002";
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
@@ -373,7 +374,7 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
   
    CustomerController.verifyotp({mobile,otp}).then((customer)=>{
       if(customer){
-         console.log(customer);
+       
          if(customer.linkable == 'linked'){
             res.status(403).json({"msg": "User already exist in system. Contact your manager for details"})
          }else if(customer.linkable == 'unavailable'){
