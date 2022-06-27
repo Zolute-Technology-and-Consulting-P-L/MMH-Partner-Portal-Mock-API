@@ -203,7 +203,14 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
         "gstAmount": "1062",
         "price": "5900"
       }
-      productsArr[0].price = 5900;
+      
+      productsArr[0].pricing = {
+         "totalAmount": 5902,
+         "price": 5900,
+         "instantDelivery": 1,
+         "additionalOption": 1,
+         "taxes": []
+     };
       $orderCode = "V2O202204270002";
 
       let partnerCommi = new Commission({commission_amount:5900/10,commissionPercentage:10,customer:{
@@ -230,7 +237,13 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
         "gstAmount":"4230",
         "price": "23500"
       }
-      productsArr[0].price = 23500;
+      productsArr[0].pricing = {
+         "totalAmount": 23502,
+         "price": 23500,
+         "instantDelivery": 1,
+         "additionalOption": 1,
+         "taxes": []
+     };
       $orderCode = "V2O202204270003";
       let partnerCommi = new Commission({commission_amount:23500/10,commissionPercentage:10,customer:{
          userID:"526541",
