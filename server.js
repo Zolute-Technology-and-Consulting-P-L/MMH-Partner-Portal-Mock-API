@@ -209,7 +209,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured"});
+      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:"V2O202204270002",currency:"INR"});
 
       let wallet = new Wallet({blance:5900/10,partnerId:req.user._id})
       wallet.save((data)=>{
@@ -235,7 +235,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured"});
+      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:"V2O202204270002",currency:"INR"});
       partnerCommi.save((err,commission)=>{
          console.log(commission)
       })
