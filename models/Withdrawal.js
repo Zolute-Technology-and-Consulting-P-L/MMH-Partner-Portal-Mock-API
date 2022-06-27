@@ -12,6 +12,9 @@ const withDrawlSchema = new mongoose.Schema({
             "date": {
                 type:Date
             },
+            "createdBy":{
+                type:String
+            },
             "comment": {
                 type:String
             }

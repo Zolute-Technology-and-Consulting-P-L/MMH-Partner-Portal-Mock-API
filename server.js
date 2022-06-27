@@ -330,20 +330,35 @@ app.get('/partner/Commission/wallet/', function (req, res) {
       res.send( data );
    });
 })
-app.post('/partner/Commission/withdrawal/', function (req, res) {
-  
-   fs.readFile( __dirname + "/" + "json/addwithdrawal.json", 'utf8', function (err, data) {
+app.post('/partner/Commission/withdrawal/', auth.authenticateToken, function (req, res) {
+
+   let withDrawlReq = new Withdrawal();
+   let d = new Date();
+   withDrawlReq.amount = req.body.amount;
+   withDrawlReq.requestdate = d.toUTCString();
+   withDrawlReq.date = d.toISOString();
+   withDrawlReq.createdBy = req.user._id;
+
+   withDrawlReq.save((err,withdrawal)=>{
+      if(err){
+         console.log(err)
+      }
+      res.send({
+         "msg": "withdrawal request created"
+        
+     });
+   })
      
-      res.send( data );
-   });
+      
+   
 })
-app.get('/partner/Commission/withdrawalRequest/', function (req, res) {
+app.get('/partner/Commission/withdrawalRequest/', auth.authenticateToken, function (req, res) {
    let response = {
       "totalRecords": 1,
       "limit": 10,
       "page": 1,
    }
-   Withdrawal.find({}).then((list)=>{
+   Withdrawal.find({createdBy:req.user._id}).then((list)=>{
       response.withdrawalRequest = list;
 
       res.json(response);
