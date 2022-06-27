@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const walletSchema = mongoose.Schema({
-    blance:{
+    balance:{
         type:Number
     },
     partnerId:{
