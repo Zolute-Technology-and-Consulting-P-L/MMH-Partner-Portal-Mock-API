@@ -173,6 +173,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
    let body = req.body;
    let productsArr = req.body.products;
    let $product = productsArr[0];
+
    if($product.id == 18){
       $set = {
          "discountAmount": 0,
@@ -181,6 +182,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
         "netAmount": (5900+1062),
         "gstAmount": "1062"
       }
+      productsArr[0].price = 5900
    }else{
       $set = {
          "discountAmount": 0,
@@ -189,7 +191,9 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
         "netAmount": (23500+4230),
         "gstAmount":"4230"
       }
+      productsArr[0].price = 23500
    }
+   
    DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
