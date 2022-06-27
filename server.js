@@ -33,9 +33,6 @@ database.once('connected', () => {
     console.log('Database Connected');
 });
 
-
-
-
 app.use(express.json());
 
 
@@ -373,8 +370,10 @@ app.get('/partner/Commission/withdrawalRequest/', auth.authenticateToken, functi
 
 app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, res) {
    const {mobile,otp} = req.body;
+  
    CustomerController.verifyotp({mobile,otp}).then((customer)=>{
       if(customer){
+         console.log(customer);
          if(customer.linkable == 'linked'){
             res.status(403).json({"msg": "User already exist in system. Contact your manager for details"})
          }else if(customer.linkable == 'unavailable'){
