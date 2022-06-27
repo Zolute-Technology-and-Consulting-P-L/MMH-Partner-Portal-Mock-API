@@ -90,6 +90,9 @@ app.post('/partner/me/veryfyotp', function (req, res,next) {
         Commission.deleteMany({}).then((count)=>{
          console.log(count);
         })
+        Wallet.deleteMany({}).then((count)=>{
+         console.log(count);
+        })
         DraftOrder.deleteMany({}).then((count)=>{
          console.log(count)
          res.json(response)
