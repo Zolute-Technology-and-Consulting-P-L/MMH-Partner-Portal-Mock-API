@@ -18,20 +18,7 @@ const draftOrderSchema = new mongoose.Schema({
         type:String
     },
     plot:{
-        type: Object,
-        default: {
-            "length": "80",
-            "width": "60",
-            "floors": "1",
-            "direction": "N",
-            "type": "RESD",
-            "builtUpArea": "4800",
-            "numberOfRooms": "",
-            "budget": "",
-            "sketch": [],
-            "siteImage": [],
-            "notes": ""
-        }
+        type: Object
     },
     relatedDesigns:{
         type:Array

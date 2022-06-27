@@ -202,7 +202,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
 app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
    DraftOrder.findById(req.params.orderID,function(err,order){
       order.couponCode = req.body.promocode;
-      order.save((orderInfo)=>{
+      order.save((err,orderInfo)=>{
          res.json(orderInfo);
       })
   })
