@@ -180,7 +180,7 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
       isdCode: "91"
    }
    draftOrder.createdBy = req.user._id;
-   draftOrder.orderCode = "V2O202204270002";
+   
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
@@ -193,6 +193,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
    let productsArr = req.body.products;
    let $product = productsArr[0];
    let d = new Date();
+   let $orderCode;
    if($product.id == 18){
       $set = {
          "discountAmount": 0,
@@ -203,15 +204,16 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
         "price": "5900"
       }
       productsArr[0].price = 5900;
+      $orderCode = "V2O202204270002";
 
       let partnerCommi = new Commission({commission_amount:5900/10,commissionPercentage:10,customer:{
          userID:"526541",
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:"V2O202204270002",currency:"INR"});
+      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
 
-      let wallet = new Wallet({blance:5900/10,partnerId:req.user._id})
+      let wallet = new Wallet({balance:5900/10,partnerId:req.user._id})
       wallet.save((data)=>{
          console.log(data);
       })
@@ -229,24 +231,24 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
         "price": "23500"
       }
       productsArr[0].price = 23500;
-     
+      $orderCode = "V2O202204270003";
       let partnerCommi = new Commission({commission_amount:23500/10,commissionPercentage:10,customer:{
          userID:"526541",
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:"V2O202204270002",currency:"INR"});
+      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
       partnerCommi.save((err,commission)=>{
          console.log(commission)
       })
 
-      let wallet = new Wallet({blance:23500/10,partnerId:req.user._id})
+      let wallet = new Wallet({balance:23500/10,partnerId:req.user._id})
       wallet.save((data)=>{
          console.log(data);
       })
    }
    
-   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set}, {upsert:true}, function(err,result){
+   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set,orderCode:$orderCode}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
       }else{
@@ -264,11 +266,10 @@ app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
       })
   })
 })
-app.post('/partner/orderv2/priority/:orderID', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/applyCouponCode.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+app.post('/partner/orderv2/priority/:orderID', auth.authenticateToken, function (req, res) {
+   DraftOrder.findOne({_id:req.params.orderID}).then((order)=>{
+      res.json(order);
+   })
 })
 app.post('/partner/orderv2/activationAmount/', function (req, res) {
    fs.readFile( __dirname + "/" + "json/activationAmount.json", 'utf8', function (err, data) {
