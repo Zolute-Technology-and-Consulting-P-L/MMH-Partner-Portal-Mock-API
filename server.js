@@ -16,6 +16,7 @@ const DraftOrder = require('./models/DraftOrder');
 const Commission = require('./models/Commission');
 const Withdrawal = require('./models/Withdrawal');
 const IncommingLead = require('./models/IncommingLead');
+const CustomerModel = require('./models/CustomerModel');
 app.use(cors());
 
 
@@ -381,14 +382,17 @@ app.get('/partner/Commission/withdrawalRequest/', auth.authenticateToken, functi
 
 app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, res) {
    const {mobile,otp} = req.body;
-  
+ 
    CustomerController.verifyotp({mobile,otp}).then((customer)=>{
+   
       if(customer){
-       
          if(customer.linkable == 'linked'){
-            res.status(403).json({"msg": "User already exist in system. Contact your manager for details"})
+            res.status(403).json({"msg": "User already exist in system. Contact your manager for details"});
+            return
          }else if(customer.linkable == 'unavailable'){
+            
             res.status(403).json({ "msg": "Lead status not valid so you hove not permission to create lead"});
+            return
          }
          
          let link = new customerLink({
@@ -406,7 +410,6 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
         });
          
       }else{
-         console.log(req.body.mobile,req.body.otp)
           IncommingLead.findOne({contact:req.body.mobile,otp:req.body.otp}).then((incUser)=>{
             if(incUser){
                let link = new customerLink({

@@ -13,6 +13,9 @@ const customertSchema = new mongoose.Schema({
     contact:{
         type:Number
     },
+    linkable:{
+        type:String
+    },
     isd:{
         type:Number,
     },
