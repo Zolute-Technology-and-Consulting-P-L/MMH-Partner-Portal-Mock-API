@@ -80,7 +80,15 @@ app.post('/partner/me/veryfyotp', function (req, res,next) {
             },
             "token": user.mobile
         }
-        res.json(response)
+        CustomerLink.deleteMany({}).then((count)=>{
+            console.log(count)
+        });
+        DraftOrder.deleteMany({}).then((count)=>{
+         console.log(count)
+         res.json(response)
+        });
+        
+        
       }else{
          res.status(401).json({"msg":"invalid mobile or otp"});
       }
