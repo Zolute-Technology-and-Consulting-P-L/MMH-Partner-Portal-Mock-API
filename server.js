@@ -397,12 +397,14 @@ app.post('/partner/Commission/withdrawal/', auth.authenticateToken, function (re
    if(amount < 1200){
       res.status(403).json({
          "msg": "Withdrawn minimum amount should be  1200 INR"
-      })
+      });
+      return 
    }
    if(amount > 2000){
       res.status(403).json({
          "msg": "Withdrawn maximum 2000 INR"
       })
+      return
    }
    withDrawlReq.amount = req.body.amount;
    withDrawlReq.requestdate = d.toUTCString();
