@@ -17,6 +17,7 @@ const Commission = require('./models/Commission');
 const Withdrawal = require('./models/Withdrawal');
 const IncommingLead = require('./models/IncommingLead');
 const CustomerModel = require('./models/CustomerModel');
+const Wallet = require('./models/Wallet');
 app.use(cors());
 
 
@@ -184,7 +185,7 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
       res.status(500).json(e);
    })
 })
-app.post('/partner/orderv2/products/:orderID', function (req, res) {
+app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function (req, res) {
    let body = req.body;
    let productsArr = req.body.products;
    let $product = productsArr[0];
@@ -205,8 +206,12 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString()});
+      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured"});
 
+      let wallet = new Wallet({blance:5900/10,partnerId:req.user._id})
+      wallet.save((data)=>{
+         console.log(data);
+      })
       partnerCommi.save((err,commission)=>{
          console.log(commission)
       })
@@ -227,9 +232,14 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString()});
+      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured"});
       partnerCommi.save((err,commission)=>{
          console.log(commission)
+      })
+
+      let wallet = new Wallet({blance:23500/10,partnerId:req.user._id})
+      wallet.save((data)=>{
+         console.log(data);
       })
    }
    
@@ -371,16 +381,26 @@ app.get('/partner/Commission',auth.authenticateToken, function (req, res) {
       res.json(response);
    })
 })
-app.get('/partner/Commission/wallet/', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/wallet.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+app.get('/partner/Commission/wallet/',auth.authenticateToken, function (req, res) {
+  Wallet.findOne({partnerId:req.user._id}).then((walletData)=>{
+   res.json(walletData);
+  })
 })
 app.post('/partner/Commission/withdrawal/', auth.authenticateToken, function (req, res) {
 
    let withDrawlReq = new Withdrawal();
    let d = new Date();
+   let amount = req.body.amount;
+   if(amount < 1200){
+      res.status(403).json({
+         "msg": "Withdrawn minimum amount should be  1200 INR"
+      })
+   }
+   if(amount > 2000){
+      res.status(403).json({
+         "msg": "Withdrawn maximum 2000 INR"
+      })
+   }
    withDrawlReq.amount = req.body.amount;
    withDrawlReq.requestdate = d.toUTCString();
    withDrawlReq.date = d.toISOString();
