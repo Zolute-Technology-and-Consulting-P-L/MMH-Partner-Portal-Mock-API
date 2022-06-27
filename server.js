@@ -162,6 +162,7 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
    }
    draftOrder.createdBy = req.user._id;
    draftOrder.orderCode = "V2O202204270002";
+   draftOrder.
    draftOrder.save().then((order)=>{
       res.json(order)
    }).catch((e)=>{
@@ -173,6 +174,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
    let body = req.body;
    let productsArr = req.body.products;
    let $product = productsArr[0];
+   let gstAmt = 0;
    if($product.id == 18){
       $set = {
          "discountAmount": 0,
@@ -180,6 +182,7 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
         "grossAmount": 5900,
         "netAmount": (5900+1062)
       }
+      gstAmt = "1062";
    }else{
       $set = {
          "discountAmount": 0,
@@ -187,8 +190,10 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
         "grossAmount": 23500,
         "netAmount": (23500+4230)
       }
+
+      gstAmt = "4230";
    }
-   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set}, {upsert:true}, function(err,result){
+   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set,gstAmount:gstAmt}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
       }else{
@@ -233,7 +238,11 @@ app.post('/partner/orderv2/activationAmount/:orderID', function (req, res) {
 app.get('/partner/orderv2/', auth.authenticateToken, function (req, res) {
    let  data = [];
    var orderCount = 0;
-   DraftOrder.find({createdBy:req.user._id}).then((orders)=>{
+   let $cond = {createdBy:req.user._id}
+   if(req.body.orderCode){
+      $cond.orderCode = req.body.orderCode;
+   }
+   DraftOrder.find($cond).then((orders)=>{
       orders.forEach(elem => {
             data.push({
                "orderID": elem._id,

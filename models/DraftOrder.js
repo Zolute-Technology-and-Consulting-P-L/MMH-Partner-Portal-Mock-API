@@ -46,6 +46,9 @@ const draftOrderSchema = new mongoose.Schema({
             "netAmount": 0
         }
     },
+    gstAmount:{
+        type:String
+    },
     customer:{
         type:Object
     },
