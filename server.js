@@ -283,11 +283,10 @@ app.post('/partner/orderv2/create/:orderID', function (req, res) {
       res.send( data );
    });
 })
-app.post('/partner/orderv2/activationAmount/:orderID', function (req, res) {
-   fs.readFile( __dirname + "/" + "json/activationAmountadd.json", 'utf8', function (err, data) {
-     
-      res.send( data );
-   });
+app.post('/partner/orderv2/activationAmount/:orderID', auth.authenticateToken, function (req, res) {
+   DraftOrder.findOne({_id:req.params.orderID}).then((order)=>{
+      res.json(order);
+   })
 })
 app.get('/partner/orderv2/', auth.authenticateToken, function (req, res) {
    let  data = [];
