@@ -4,7 +4,7 @@ const withDrawlSchema = new mongoose.Schema({
                 type:String
             },
             "amount": {
-                type:Number
+                type:String
             },
             "status": {
                 type:String
