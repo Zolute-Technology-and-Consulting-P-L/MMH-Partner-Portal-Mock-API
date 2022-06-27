@@ -192,18 +192,42 @@ app.post('/partner/orderv2/products/:orderID', function (req, res) {
         "taxes": [],
         "grossAmount": 5900,
         "netAmount": (5900+1062),
-        "gstAmount": "1062"
+        "gstAmount": "1062",
+        "price": "5900"
       }
-      productsArr[0].price = 5900
+      productsArr[0].price = 5900;
+
+      let partnerCommi = new Commission({commission_amount:5900/10,commissionPercentage:10,customer:{
+         userID:"526541",
+         firstname:"kian",
+         lastname:"choudhary",
+         contact:"9876543212"
+      }});
+
+      partnerCommi.save((err,commission)=>{
+         console.log(commission)
+      })
+
    }else{
       $set = {
-         "discountAmount": 0,
+       "discountAmount": 0,
         "taxes": [],
         "grossAmount": 23500,
         "netAmount": (23500+4230),
-        "gstAmount":"4230"
+        "gstAmount":"4230",
+        "price": "23500"
       }
-      productsArr[0].price = 23500
+      productsArr[0].price = 23500;
+
+      let partnerCommi = new Commission({commission_amount:23500/10,commissionPercentage:10,customer:{
+         userID:"526541",
+         firstname:"kian",
+         lastname:"choudhary",
+         contact:"9876543212"
+      }});
+      partnerCommi.save((err,commission)=>{
+         console.log(commission)
+      })
    }
    
    DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set}, {upsert:true}, function(err,result){
