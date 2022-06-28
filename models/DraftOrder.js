@@ -9,11 +9,11 @@ const draftOrderSchema = new mongoose.Schema({
         default:142
     },
     creationTime:{
-        type:Date,
+        type:String,
         default:new Date().toLocaleString()
     },
     orderedAt:{
-        type:Date,
+        type:String,
         default:new Date().toLocaleString()
     },
     modifiedTime:{
