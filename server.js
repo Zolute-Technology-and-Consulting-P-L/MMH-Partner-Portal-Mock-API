@@ -323,7 +323,7 @@ app.get('/partner/orderv2/', auth.authenticateToken, function (req, res) {
             "orderTotalAmount": elem.pricing.grossAmount,
             "ispaid": 0,
             "customer": elem.customer,
-            "orderStatus": "Pending Client Approval",
+            "orderStatus": "Active",
             "version": "v2",
             "payments": [],
             "services": [
