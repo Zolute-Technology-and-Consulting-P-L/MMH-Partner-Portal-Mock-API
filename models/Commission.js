@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const dateTime = require("../middlewares/datetime");
 
 const commissionSchema = new mongoose.Schema({
 
@@ -15,10 +16,12 @@ const commissionSchema = new mongoose.Schema({
             type:String
         },
         date: {
-            type:String
+            type:String,
+            default:dateTime.dateTime
         },
             matureDate: {
-                type:String
+                type:String,
+                default:dateTime.dateTime
             },
             customePaidAmount:{
                 type:Number

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const dateTime = require("../middlewares/datetime");
 
 const draftOrderSchema = new mongoose.Schema({
     orderCode:{
@@ -10,11 +11,11 @@ const draftOrderSchema = new mongoose.Schema({
     },
     creationTime:{
         type:String,
-        default:new Date().toLocaleString()
+        default:dateTime.dateTime
     },
     orderedAt:{
         type:String,
-        default:new Date().toLocaleString()
+        default:dateTime.dateTime
     },
     modifiedTime:{
         type: Date

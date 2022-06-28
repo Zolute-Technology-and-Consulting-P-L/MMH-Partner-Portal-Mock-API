@@ -8,6 +8,7 @@ const PartnerController = require("./controllers/PartnerController");
 const customerLink = require("./models/CustomerLink");
 const defatOrder = require("./models/DraftOrder");
 const auth = require("./middlewares/jwt");
+const dateTime = require("./middlewares/datetime");
 var fs = require("fs");
 
 var cors = require('cors');
@@ -42,7 +43,7 @@ app.use(express.json());
 // app.get('/partner/customer/',CustomerController.customerList);
 
 app.post('/partner/customer', function (req, res) {
-   
+     
       CustomerController.create(req.body).then((data)=>{
          res.json(data);
       }).catch((err)=>{
@@ -51,6 +52,7 @@ app.post('/partner/customer', function (req, res) {
 })
 
 app.post('/partner/me/veryfyotp', function (req, res,next) {
+   
    const {mobile,otp} = req.body;
    PartnerController.verifyOtp({mobile,otp}).then((user)=>{
       console.log(user)
@@ -218,7 +220,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toLocaleString(),matureDate:d.toLocaleString(),commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
+      },date:dateTime.dateTime,matureDate:dateTime.dateTime,commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
 
       let wallet = new Wallet({balance:5900/10,partnerId:req.user._id})
       wallet.save((data)=>{
@@ -420,8 +422,8 @@ app.post('/partner/Commission/withdrawal/', auth.authenticateToken, function (re
       return
    }
    withDrawlReq.amount = req.body.amount;
-   withDrawlReq.requestdate = d.toLocaleString();
-   withDrawlReq.date = d.toLocaleString();
+   withDrawlReq.requestdate = dateTime.dateTime;
+   withDrawlReq.date = dateTime.dateTime;
    withDrawlReq.createdBy = req.user._id;
 
    withDrawlReq.save((err,withdrawal)=>{
@@ -494,7 +496,8 @@ app.post('/partner/customer/verifyotp', auth.authenticateToken, function (req, r
                   contact:incUser.contact,
                   email:incUser.email,
                   firstname:incUser.firstname,
-                  lastname:incUser.lastname
+                  lastname:incUser.lastname,
+                  linkStatus:"Indirect"
                });
               link.save().then((user)=>{
                res.json({'msg':'customer linked successfully!','data':user});
