@@ -218,7 +218,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          firstname:"kian",
          lastname:"choudhary",
          contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
+      },date:d.toLocaleString(),matureDate:d.toLocaleString(),commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
 
       let wallet = new Wallet({balance:5900/10,partnerId:req.user._id})
       wallet.save((data)=>{
@@ -420,8 +420,8 @@ app.post('/partner/Commission/withdrawal/', auth.authenticateToken, function (re
       return
    }
    withDrawlReq.amount = req.body.amount;
-   withDrawlReq.requestdate = d.toUTCString();
-   withDrawlReq.date = d.toISOString();
+   withDrawlReq.requestdate = d.toLocaleString();
+   withDrawlReq.date = d.toLocaleString();
    withDrawlReq.createdBy = req.user._id;
 
    withDrawlReq.save((err,withdrawal)=>{
