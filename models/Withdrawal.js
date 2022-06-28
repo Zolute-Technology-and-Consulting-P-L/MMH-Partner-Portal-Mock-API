@@ -1,21 +1,25 @@
 const mongoose = require("mongoose");
 const withDrawlSchema = new mongoose.Schema({
-            "requestdate":{
+            requestdate:{
                 type:String
             },
-            "amount": {
+            amount: {
                 type:String
             },
-            "status": {
+            status: {
                 type:String
             },
-            "date": {
+            date: {
                 type:Date
             },
-            "createdBy":{
+            status:{
+                type:String,
+                default:"Pending"
+            },
+            createdBy:{
                 type:String
             },
-            "comment": {
+            comment: {
                 type:String
             }
 })
