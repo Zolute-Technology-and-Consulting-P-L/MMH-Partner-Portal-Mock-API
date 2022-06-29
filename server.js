@@ -205,7 +205,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          $productPrice = 32500;
       }else if(elem.id == 1){
          $orderCode = "V2O202204270002";
-         $productPrice = 32500;
+         $productPrice = 6500;
       }else if(elem.id == 2){
          $orderCode = "V2O202204270003";
          $productPrice = 7200;
@@ -225,7 +225,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          "additionalOption": 1,
          "taxes": []
      };
-
+     console.log($productPrice);
      DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},orderCode:$orderCode}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
@@ -257,6 +257,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          })
       }
    });
+   console.log('ordertotal',$orderTotal);
    let gstAmt = $orderTotal*18/100;
    let updatePricing = {
          "discountAmount": 0,
