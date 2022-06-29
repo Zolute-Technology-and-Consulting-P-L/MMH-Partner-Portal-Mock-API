@@ -193,6 +193,7 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
 app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function (req, res) {
    let body = req.body;
    let productsArr = req.body.products;
+   console.log(productsArr)
    let $product = productsArr[0];
    let d = new Date();
    let $orderCode;
@@ -225,7 +226,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          "taxes": []
      };
 
-     DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set,orderCode:$orderCode}, {upsert:true}, function(err,result){
+     DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},orderCode:$orderCode}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
       }
@@ -246,7 +247,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
    Wallet.findOne({partnerId:req.user._id}).then((walletD)=>{
       if(walletD){
          walletD.balance = (walletD.balance + $orderTotal/10)
-         salletD.save((walle)=>{
+         walletD.save((walle)=>{
             console.log(walle);
          })
       }else{
@@ -255,6 +256,19 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
             console.log(data);
          })
       }
+   });
+   let gstAmt = $orderTotal*18/100;
+   let updatePricing = {
+         "discountAmount": 0,
+         "taxes": [],
+         "grossAmount": (gstAmt + $orderTotal),
+         "gstAmount": gstAmt,
+         "netAmount": $orderTotal
+     
+   }
+
+   DraftOrder.findByIdAndUpdate(req.params.orderID,{pricing:updatePricing}).then((order)=>{
+      res.json(order);
    })
   
 })
