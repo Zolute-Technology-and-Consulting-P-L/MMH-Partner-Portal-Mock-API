@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const dateTime = require("../middlewares/datetime");
 const withDrawlSchema = new mongoose.Schema({
             requestdate:{
                 type:String
@@ -11,7 +12,8 @@ const withDrawlSchema = new mongoose.Schema({
                 type:String
             },
             date: {
-                type:Date
+                type:String,
+                default:dateTime.dateTime
             },
             status:{
                 type:String,
