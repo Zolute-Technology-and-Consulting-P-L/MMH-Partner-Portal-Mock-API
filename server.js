@@ -198,22 +198,28 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
    let $orderCode;
    let  $productPrice;
    let $orderTotal = 0;
+   let $productName = '';
  
       if($product.id == 12){
          $orderCode = "V2O202204270001";
          $productPrice = 32500;
+         $productName = 'House Design Package'
       }else if($product.id == 1){
          $orderCode = "V2O202204270002";
          $productPrice = 6500;
+         $productName = 'Floor Plan'
       }else if($product.id == 2){
          $orderCode = "V2O202204270003";
          $productPrice = 7200;
+         $productName = 'Modenrn 3D Elevation'
       }else if($product.id == 3){
          $orderCode = "V2O202204270004";
          $productPrice = 7200;
+         $productName = 'Working Drawings'
       }else if($product.id == 4){
          $orderCode = "V2O202204270005";
          $productPrice = 8500;
+         $productName = 'Structure Drawing'
       }
 
       $orderTotal =  $productPrice;
@@ -224,12 +230,17 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          "additionalOption": 1,
          "taxes": []
      };
+     productsArr[0].name = $productName;
 
-     DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},orderCode:$orderCode}, {upsert:true}, function(err,result){
-      if(err){
-              console.log(err);
+   let gstAmt = $orderTotal*18/100;
+      let $setPricing = {
+            "discountAmount": 0,
+            "taxes": [],
+            "grossAmount": (gstAmt + $orderTotal),
+            "gstAmount": gstAmt,
+            "netAmount": $orderTotal
+      
       }
-      });
    
 
    let partnerCommi = new Commission({commission_amount:$orderTotal/10,commissionPercentage:10,customer:{
@@ -256,20 +267,14 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
          })
       }
    });
-   console.log('ordertotal',$orderTotal);
-   let gstAmt = $orderTotal*18/100;
-   let updatePricing = {
-         "discountAmount": 0,
-         "taxes": [],
-         "grossAmount": (gstAmt + $orderTotal),
-         "gstAmount": gstAmt,
-         "netAmount": $orderTotal
-     
-   }
-
-   DraftOrder.findByIdAndUpdate(req.params.orderID,{pricing:updatePricing}).then((order)=>{
-      res.json(order);
-   })
+   
+   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr},pricing:$setPricing},orderCode:$orderCode}, {upsert:true}, function(err,result){
+      if(err){
+              console.log(err);
+      }
+      res.json(result);
+      });
+  
   
 })
 app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
