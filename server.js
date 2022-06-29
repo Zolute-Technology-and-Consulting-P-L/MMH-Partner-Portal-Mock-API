@@ -236,9 +236,9 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
       let $setPricing = {
             "discountAmount": 0,
             "taxes": [],
-            "grossAmount": (gstAmt + $orderTotal),
+            "grossAmount": $orderTotal,
             "gstAmount": gstAmt,
-            "netAmount": $orderTotal
+            "netAmount": (gstAmt + $orderTotal)
       
       }
       console.log($setPricing);
