@@ -196,82 +196,67 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
    let $product = productsArr[0];
    let d = new Date();
    let $orderCode;
-   if($product.id == 18){
-      $set = {
-         "discountAmount": 0,
-        "taxes": [],
-        "grossAmount": 5900,
-        "netAmount": (5900+1062),
-        "gstAmount": "1062",
-        "price": "5900"
+   let  $productPrice;
+   let $orderTotal = 0;
+   productsArr.forEach(function(elem,index){
+      if(elem.id == 12){
+         $orderCode = "V2O202204270001";
+         $productPrice = 32500;
+      }else if(elem.id == 1){
+         $orderCode = "V2O202204270002";
+         $productPrice = 32500;
+      }else if(elem.id == 2){
+         $orderCode = "V2O202204270003";
+         $productPrice = 7200;
+      }else if(elem.id == 3){
+         $orderCode = "V2O202204270004";
+         $productPrice = 7200;
+      }else if(elem.id == 4){
+         $orderCode = "V2O202204270005";
+         $productPrice = 8500;
       }
-      
-      productsArr[0].pricing = {
-         "totalAmount": 5902,
-         "price": 5900,
+
+      $orderTotal = $orderTotal + $productPrice;
+      productsArr[index].pricing = {
+         "totalAmount": $productPrice + 2,
+         "price": $productPrice,
          "instantDelivery": 1,
          "additionalOption": 1,
          "taxes": []
      };
-      $orderCode = "V2O202204270002";
 
-      let partnerCommi = new Commission({commission_amount:5900/10,commissionPercentage:10,customer:{
-         userID:"526541",
-         firstname:"kian",
-         lastname:"choudhary",
-         contact:"9876543212"
-      },date:dateTime.dateTime,matureDate:dateTime.dateTime,commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
-
-      let wallet = new Wallet({balance:5900/10,partnerId:req.user._id})
-      wallet.save((data)=>{
-         console.log(data);
-      })
-      partnerCommi.save((err,commission)=>{
-         console.log(commission)
-      })
-
-   }else{
-      $set = {
-       "discountAmount": 0,
-        "taxes": [],
-        "grossAmount": 23500,
-        "netAmount": (23500+4230),
-        "gstAmount":"4230",
-        "price": "23500"
-      }
-      productsArr[0].pricing = {
-         "totalAmount": 23502,
-         "price": 23500,
-         "instantDelivery": 1,
-         "additionalOption": 1,
-         "taxes": []
-     };
-      $orderCode = "V2O202204270003";
-      let partnerCommi = new Commission({commission_amount:23500/10,commissionPercentage:10,customer:{
-         userID:"526541",
-         firstname:"kian",
-         lastname:"choudhary",
-         contact:"9876543212"
-      },date:d.toISOString(),matureDate:d.toISOString(),commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
-      partnerCommi.save((err,commission)=>{
-         console.log(commission)
-      })
-
-      let wallet = new Wallet({balance:23500/10,partnerId:req.user._id})
-      wallet.save((data)=>{
-         console.log(data);
-      })
-   }
-   
-   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set,orderCode:$orderCode}, {upsert:true}, function(err,result){
+     DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$set,orderCode:$orderCode}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
-      }else{
-         DraftOrder.findById(req.params.orderID,function(err,order){
-                  res.json(order);
-              })
       }
-   });
+      });
+   })
+
+   let partnerCommi = new Commission({commission_amount:$orderTotal/10,commissionPercentage:10,customer:{
+      userID:"526541",
+      firstname:"kian",
+      lastname:"choudhary",
+      contact:"9876543212"
+   },date:dateTime.dateTime,matureDate:dateTime.dateTime,commissionStatus:"Matured",order_code:$orderCode,currency:"INR"});
+
+   partnerCommi.save((err,commission)=>{
+      console.log(commission)
+   })
+
+   Wallet.findOne({partnerId:req.user._id}).then((walletD)=>{
+      if(walletD){
+         walletD.balance = (walletD.balance + $orderTotal/10)
+         salletD.save((walle)=>{
+            console.log(walle);
+         })
+      }else{
+         let wallet = new Wallet({balance:$orderTotal/10,partnerId:req.user._id})
+         wallet.save((data)=>{
+            console.log(data);
+         })
+      }
+   })
+  
 })
 app.post('/partner/orderv2/coupon/:orderID', function (req, res) {
    DraftOrder.findById(req.params.orderID,function(err,order){
