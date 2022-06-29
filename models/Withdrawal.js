@@ -21,7 +21,8 @@ const withDrawlSchema = new mongoose.Schema({
                 type:String
             },
             comment: {
-                type:String
+                type:String,
+                default:"....."
             }
 })
 
