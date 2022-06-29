@@ -193,45 +193,44 @@ app.post('/partner/orderv2', auth.authenticateToken, function (req, res) {
 app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function (req, res) {
    let body = req.body;
    let productsArr = req.body.products;
-   console.log(productsArr)
    let $product = productsArr[0];
    let d = new Date();
    let $orderCode;
    let  $productPrice;
    let $orderTotal = 0;
-   productsArr.forEach(function(elem,index){
-      if(elem.id == 12){
+ 
+      if($product.id == 12){
          $orderCode = "V2O202204270001";
          $productPrice = 32500;
-      }else if(elem.id == 1){
+      }else if($product.id == 1){
          $orderCode = "V2O202204270002";
          $productPrice = 6500;
-      }else if(elem.id == 2){
+      }else if($product.id == 2){
          $orderCode = "V2O202204270003";
          $productPrice = 7200;
-      }else if(elem.id == 3){
+      }else if($product.id == 3){
          $orderCode = "V2O202204270004";
          $productPrice = 7200;
-      }else if(elem.id == 4){
+      }else if($product.id == 4){
          $orderCode = "V2O202204270005";
          $productPrice = 8500;
       }
 
-      $orderTotal = $orderTotal + $productPrice;
-      productsArr[index].pricing = {
+      $orderTotal =  $productPrice;
+      productsArr[0].pricing = {
          "totalAmount": $productPrice + 2,
          "price": $productPrice,
          "instantDelivery": 1,
          "additionalOption": 1,
          "taxes": []
      };
-     console.log($productPrice);
+
      DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},orderCode:$orderCode}, {upsert:true}, function(err,result){
       if(err){
               console.log(err);
       }
       });
-   })
+   
 
    let partnerCommi = new Commission({commission_amount:$orderTotal/10,commissionPercentage:10,customer:{
       userID:"526541",
