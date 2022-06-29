@@ -241,7 +241,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
             "netAmount": $orderTotal
       
       }
-   
+      console.log($setPricing);
 
    let partnerCommi = new Commission({commission_amount:$orderTotal/10,commissionPercentage:10,customer:{
       userID:"526541",
@@ -258,7 +258,7 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
       if(walletD){
          walletD.balance = (walletD.balance + $orderTotal/10)
          walletD.save((walle)=>{
-            console.log(walle);
+            console.log('wll',walle);
          })
       }else{
          let wallet = new Wallet({balance:$orderTotal/10,partnerId:req.user._id})
@@ -268,12 +268,14 @@ app.post('/partner/orderv2/products/:orderID', auth.authenticateToken, function 
       }
    });
    
-   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr},pricing:$setPricing},orderCode:$orderCode}, {upsert:true}, function(err,result){
+   DraftOrder.updateOne({_id: req.params.orderID}, {$push: {products: {$each: productsArr}},pricing:$setPricing,orderCode:$orderCode}, {upsert:true}, function(err,result){
       if(err){
-              console.log(err);
+         console.log('ee',err);
       }
-      res.json(result);
-      });
+      DraftOrder.findOne({_id: req.params.orderID}).then((order)=>{
+         res.json(order);
+      })
+   });
   
   
 })
