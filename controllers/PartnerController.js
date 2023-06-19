@@ -2,7 +2,7 @@ const PartnersModel = require("../models/PartnersModel");
 const auth = require("../middlewares/jwt");
 
 const verifyOtp = async ({ mobile, otp }) => {
-  let user = await PartnersModel.findOne({ mobile, otp }).exec();
+  let user = await PartnersModel.findOne({ mobile: mobile, otp: otp });
   console.log("User:", user, mobile, otp);
   if (!user) {
     return null;
