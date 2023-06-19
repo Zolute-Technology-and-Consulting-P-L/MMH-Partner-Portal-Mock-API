@@ -22,7 +22,7 @@ const Wallet = require("./models/Wallet");
 app.use(cors());
 
 const mongoString = process.env.DBURL;
-console.log("connection string", mongoString);
+
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 
