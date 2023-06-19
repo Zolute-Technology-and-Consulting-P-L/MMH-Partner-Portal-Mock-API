@@ -3,8 +3,11 @@ const auth = require("../middlewares/jwt");
 
 const verifyOtp = async ({ mobile, otp }) => {
   let user = await PartnersModel.findOne({ mobile: mobile });
-  console.log("UserData:", user, mobile, otp);
+
   if (!user) {
+    return null;
+  }
+  if (user.otp !== otp) {
     return null;
   }
   const token = mobile;
