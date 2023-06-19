@@ -7,7 +7,7 @@ const verifyOtp = async ({ mobile, otp }) => {
   if (!user) {
     return null;
   }
-  if (user.otp !== +otp) {
+  if (user.otp != otp) {
     return null;
   }
   const token = mobile;
