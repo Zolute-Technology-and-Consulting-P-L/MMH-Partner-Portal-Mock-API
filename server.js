@@ -50,7 +50,7 @@ app.post("/partner/customer", function (req, res) {
 
 app.post("/partner/me/veryfyotp", function (req, res, next) {
   const { mobile, otp } = req.body;
-  console.log("Request:", mobile, otp);
+
   PartnerController.verifyOtp({ mobile, otp })
     .then((user) => {
       console.log(user);
