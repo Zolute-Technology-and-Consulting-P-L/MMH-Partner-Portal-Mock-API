@@ -22,7 +22,7 @@ const Wallet = require("./models/Wallet");
 app.use(cors());
 
 const mongoString = process.env.DBURL;
-
+console.log("connection string", mongoString);
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 
@@ -509,18 +509,14 @@ app.post(
       .then((customer) => {
         if (customer) {
           if (customer.linkable == "linked") {
-            res
-              .status(403)
-              .json({
-                msg: "User already exist in system. Contact your manager for details",
-              });
+            res.status(403).json({
+              msg: "User already exist in system. Contact your manager for details",
+            });
             return;
           } else if (customer.linkable == "unavailable") {
-            res
-              .status(403)
-              .json({
-                msg: "Lead status not valid so you hove not permission to create lead",
-              });
+            res.status(403).json({
+              msg: "Lead status not valid so you hove not permission to create lead",
+            });
             return;
           }
 
